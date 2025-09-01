@@ -3,7 +3,6 @@ const FILES_TO_CACHE = [
   "/app/",
   "/app/index.html",
   "/app/styles.css",
-  "/app/manifest.json",
   "/app/icons/s3.png"
 ];
 
@@ -47,3 +46,4 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
