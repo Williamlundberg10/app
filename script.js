@@ -21,6 +21,13 @@ async function kk(dd) {
 
     loadScheduleAndNotify();
 
+    navigator.serviceWorker.ready.then(sw => {
+        sw.showNotification("⏰ Jobbdags!", {
+            body: `Dags för test`,
+            icon: "icons/s3.png"
+        });
+    });
+
     const r1 = document.getElementById("df");
 
     let key;
@@ -107,7 +114,7 @@ async function loadScheduleAndNotify() {
 
             setTimeout(() => {
                 navigator.serviceWorker.ready.then(sw => {
-                    sw.showNotification("⏰ Jobbdags!", {
+                    se.showNotification("⏰ Jobbdags!", {
                         body: `Dags för ${item.n} kl ${item.tid}`,
                         icon: "icons/s3.png"
                     });
