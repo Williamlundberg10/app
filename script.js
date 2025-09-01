@@ -113,22 +113,22 @@ async function subscribeUser() {
         alert("You need to allow notifications!");
         return;
     }
-
-    const publicVapidKey = "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw="; // no padding, base64url
+    
+    const publicVapidKey = "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw"; // removed '='
     const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
     });
 
-
     console.log("🔑 Subscription:", JSON.stringify(subscription));
 
-    // Send subscription to your Python server
+    // Send subscription to your Python backend
     await fetch("/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(subscription)
     });
+
 }
 
 subscribeUser();
