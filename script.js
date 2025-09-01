@@ -24,7 +24,11 @@ function get(dataq) {
 
 
 async function kk(dd) {
-
+    const permission = await Notification.requestPermission();
+    if (permission !== "granted") {
+        alert("You need to allow notifications!");
+        return;
+    }
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
     r1.className = "rr"
