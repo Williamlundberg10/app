@@ -24,11 +24,8 @@ function get(dataq) {
 
 
 async function kk(dd) {
-    const permission = await Notification.requestPermission();
-    if (permission !== "granted") {
-        alert("You need to allow notifications!");
-        return;
-    }
+    subscribeUser();
+
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
     r1.className = "rr"
@@ -135,7 +132,6 @@ async function subscribeUser() {
 
 }
 
-subscribeUser();
 
 function urlBase64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
