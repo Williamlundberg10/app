@@ -1,5 +1,7 @@
 window.onload = function() {
-    kk(Number(localStorage.getItem("dd") || 1));
+    const today = new Date().getDay();
+    console.log(today)
+    kk(today);
 };
 
 
@@ -24,7 +26,6 @@ function get(dataq) {
 
 
 async function kk(dd) {
-    subscribeUser();
 
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
@@ -62,8 +63,8 @@ async function kk(dd) {
     const today = new Date();
     const hours = today.getHours().toString().padStart(2, '0');
     const minutes = today.getMinutes().toString().padStart(2, '0');
-    const currentTime = `02:40`;
-    const currentTime1 = `${hours}:${minutes - 1}`;
+    const currentTime1 = `02:40`;
+    const currentTime = `${hours}:${minutes - 1}`;
 
     console.log(currentTime);
     r1.innerHTML = ""
@@ -92,60 +93,3 @@ async function kk(dd) {
     r1.className = "rr ee"
     r11.className = "r1r ee"
 }
-
-
-
-async function subscribeUser() {
-    if (!("serviceWorker" in navigator)) {
-        console.error("❌ Service workers not supported");
-        return;
-    }
-
-    if (!("PushManager" in window)) {
-        console.error("❌ Push API not supported");
-        return;
-    }
-
-    const registration = await navigator.serviceWorker.register("/app/service-worker.js");
-    console.log("✅ Service Worker Registered");
-
-    const permission = await Notification.requestPermission();
-    if (permission !== "granted") {
-        alert("You need to allow notifications!");
-        return;
-    }
-
-    const publicVapidKey = "BF1anOjivoN0_qYPAg1IPhqEK3GRN_TgNsjuOpvJaMN5d-e7T_HHACgEhrRl1fbYw77tDPuyDjHsRnQgQr1T6Es"; // removed '='
-    const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-    });
-
-    console.log("🔑 Subscription:", JSON.stringify(subscription));
-
-    // Send subscription to your Python backend
-    await fetch("https://192.168.1.62:5540/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(subscription)
-    });
-
-}
-
-
-function urlBase64ToUint8Array(base64String) {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding)
-        .replace(/-/g, '+')
-        .replace(/_/g, '/');
-
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-
-    for (let i = 0; i < rawData.length; ++i) {
-        outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-}
-
-

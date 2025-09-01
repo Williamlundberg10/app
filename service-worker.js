@@ -4,8 +4,7 @@ const FILES_TO_CACHE = [
   "/app/index.html",
   "/app/styles.css",
   "/app/manifest.json",
-  "/app/icons/s3.png",
-  "/app/data.json"
+  "/app/icons/s3.png"
 ];
 
 
@@ -47,12 +46,4 @@ self.addEventListener("fetch", (event) => {
       return response || fetch(event.request);
     })
   );
-});
-
-self.addEventListener("push", event => {
-    const data = event.data.json();
-    self.registration.showNotification(data.title, {
-        body: data.body,
-        icon: "/icons/s3.png"
-    });
 });
