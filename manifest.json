@@ -24,16 +24,6 @@
       "sizes": "360x640",
       "type": "image/png"
     }
-  ],
-  "widgets": [
-    {
-      "name": "Schema-widget",
-      "description": "Visar nästa jobb i schemat",
-      "id": "schema-widget",
-      "src": "/widget.html",
-      "width": 300,
-      "height": 150
-    }
   ]
 
 }

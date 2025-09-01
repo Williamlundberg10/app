@@ -51,10 +51,22 @@ self.addEventListener("fetch", (event) => {
 });
 
 
-self.addEventListener("periodicsync", async event => {
-    if(event.tag === "update-schema"){
-        console.log("🔄 Uppdaterar widget-data i bakgrunden...");
-        await fetch("/data.json"); // fetch fresh data
+// Lyssna på push-notiser
+self.addEventListener('push', e => {
+    let data = {};
+    try {
+        data = e.data.json();
+    } catch (err) {
+        data = { title: "Påminnelse", body: e.data.text() };
     }
-});
 
+    const options = {
+        body: data.body,
+        icon: "icons/s3.png",
+        badge: "icons/s3.png"
+    };
+
+    e.waitUntil(
+        self.registration.showNotification(data.title, options)
+    );
+});

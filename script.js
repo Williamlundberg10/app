@@ -54,3 +54,68 @@ async function kk(dd) {
     ).join("") + "<div class='nn'></div>";
 }
 
+
+
+
+async function requestNotificationPermission() {
+    if (!("Notification" in window)) {
+        alert("Din webbläsare stöder inte notiser.");
+        return false;
+    }
+
+    let permission = Notification.permission;
+    if (permission === "default") {
+        permission = await Notification.requestPermission();
+    }
+
+    return permission === "granted";
+}
+
+async function loadScheduleAndNotify() {
+    const hasPermission = await requestNotificationPermission();
+    if (!hasPermission) {
+        console.log("❌ Notiser blockeras av användaren");
+        return;
+    }
+
+    const response = await fetch("data.json");
+    const data = await response.json();
+
+    // Kolla dagens datum
+    const today = new Date();
+    const weekday = today.getDay(); // 0=sön, 1=mån, 2=ti...
+    const map = ["sö", "må", "ti", "on", "to", "fr", "lö"];
+    const schedule = data[map[weekday]] || [];
+
+    schedule.forEach(item => {
+        if (item.n.toLowerCase() === "jobb") {
+            const [start] = item.tid.split("-");
+            const [hour, minute] = start.split(":");
+
+            const jobTime = new Date();
+            jobTime.setHours(parseInt(hour));
+            jobTime.setMinutes(parseInt(minute));
+            jobTime.setSeconds(0);
+
+            const now = new Date();
+            const timeout = jobTime.getTime() - now.getTime();
+
+            if (timeout > 0) {
+                console.log(`🔔 Jobb-notis schemalagd: ${item.n} kl ${item.tid}`);
+
+                setTimeout(() => {
+                    navigator.serviceWorker.ready.then(sw => {
+                        sw.showNotification("⏰ Jobbdags!", {
+                            body: `Dags för ${item.n} kl ${item.tid}`,
+                            icon: "icons/s3.png"
+                        });
+                    });
+                }, timeout);
+            }
+        }
+    });
+}
+
+// Kör funktionen
+loadScheduleAndNotify();
+
