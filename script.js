@@ -18,7 +18,7 @@ function get(dataq) {
 
 
 async function kk(dd) {
-    
+
     loadScheduleAndNotify();
 
     const r1 = document.getElementById("df");
@@ -91,30 +91,29 @@ async function loadScheduleAndNotify() {
     const schedule = data[map[weekday]] || [];
 
     schedule.forEach(item => {
-        if (item.n.toLowerCase() === "jobb") {
-            const [start] = item.tid.split("-");
-            const [hour, minute] = start.split(":");
+        const [start] = item.tid.split("-");
+        const [hour, minute] = start.split(":");
 
-            const jobTime = new Date();
-            jobTime.setHours(parseInt(hour));
-            jobTime.setMinutes(parseInt(minute));
-            jobTime.setSeconds(0);
+        const jobTime = new Date();
+        jobTime.setHours(parseInt(hour));
+        jobTime.setMinutes(parseInt(minute));
+        jobTime.setSeconds(0);
 
-            const now = new Date();
-            const timeout = jobTime.getTime() - now.getTime();
+        const now = new Date();
+        const timeout = jobTime.getTime() - now.getTime();
 
-            if (timeout > 0) {
-                console.log(`🔔 Jobb-notis schemalagd: ${item.n} kl ${item.tid}`);
+        if (timeout > 0) {
+            console.log(`🔔 Jobb-notis schemalagd: ${item.n} kl ${item.tid}`);
 
-                setTimeout(() => {
-                    navigator.serviceWorker.ready.then(sw => {
-                        sw.showNotification("⏰ Jobbdags!", {
-                            body: `Dags för ${item.n} kl ${item.tid}`,
-                            icon: "icons/s3.png"
-                        });
+            setTimeout(() => {
+                navigator.serviceWorker.ready.then(sw => {
+                    sw.showNotification("⏰ Jobbdags!", {
+                        body: `Dags för ${item.n} kl ${item.tid}`,
+                        icon: "icons/s3.png"
                     });
-                }, timeout);
-            }
+                });
+            }, timeout);
         }
+        
     });
 }
