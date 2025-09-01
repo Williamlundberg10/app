@@ -14,14 +14,14 @@
     display: flex;
     flex-direction: row;
     gap: 5px;
-    width: 330px;
-    height: 40px;
-    border-radius: 20px;
-    border-color: rgb(220, 220, 220);
+    width: 320px;
+    height: 50px;
+    border-radius: 200px;
+    border-color: rgba(220, 220, 220, 0.5);
     border-style: solid;
     border-width: 3px;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
+    background-color: #ffffff;
+    padding: 15px;
     margin: 10px;
     align-items: center;
     justify-content: center;
@@ -35,20 +35,23 @@
     font-family: "Kavoon", serif;
     font-weight: 400;
     font-style: normal;
-    border-radius: 20px;
-    border-color: rgb(146, 146, 146);
+    border-radius: 200px;
+    border-color: rgba(220, 220, 220, 0.5);
     border-style: solid;
     border-width: 3px;
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    color: #000000;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    transform: translateY(-30px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     &.q{
-        border-color: rgb(220, 220, 220);
+        transform: translateY(0px);
         background-color: rgb(255, 255, 255);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -61,14 +64,37 @@
     width: 330px;
     height: 40px;
     border-radius: 20px;
-    border-color: rgb(220, 220, 220);
+    border-color: rgba(220, 220, 220, 0.5);
     border-style: solid;
     border-width: 3px;
     background-color: rgb(255, 255, 255);
+    color: #000000;
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aaa{
+    display: flex;
+    flex-direction: row;
+    font-family: "Kavoon", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 330px;
+    height: 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    border-color: rgba(220, 220, 220, 0.5);
+    border-style: solid;
+    border-width: 3px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -95,4 +121,47 @@ body{
     overflow-y: hidden;
     margin: 0px;
     padding: 0px;
+}
+
+.rr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+
+    &.ee {
+        animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+}
+
+.r1r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+
+    &.ee {
+        animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+}
+
+/* OPEN ANIMATION */
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    gap: 10px;
+    transform: translateY(-500px);
+  }
+  50% {
+    opacity: 1;
+    gap: 20px;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    gap: 10px;
+    transform: translateY(0);
+  }
 }

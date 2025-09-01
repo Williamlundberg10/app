@@ -48,23 +48,10 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-
-// Lyssna på push-notiser
-self.addEventListener('push', e => {
-    let data = {};
-    try {
-        data = e.data.json();
-    } catch (err) {
-        data = { title: "Påminnelse", body: e.data.text() };
-    }
-
-    const options = {
+self.addEventListener("push", event => {
+    const data = event.data.json();
+    self.registration.showNotification(data.title, {
         body: data.body,
-        icon: "icons/s3.png",
-        badge: "icons/s3.png"
-    };
-
-    e.waitUntil(
-        self.registration.showNotification(data.title, options)
-    );
+        icon: "/icons/s3.png"
+    });
 });

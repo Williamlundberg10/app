@@ -2,117 +2,285 @@
   "mån": [
     {
       "n": "SV",
-      "tid": "08:15-09:15"
+      "tid": "08:15-09:15",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
     },
     {
       "n": "EN",
-      "tid": "09:30-10:30"
+      "tid": "09:30-10:30",
+      "color": "#4C275D",
+      "color2": "#FFFFFF"
     },
     {
       "n": "SV",
-      "tid": "10:45-11:05"
+      "tid": "10:45-11:05",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
     },
     {
       "n": "IDH",
-      "tid": "11:15-11:55"
+      "tid": "11:15-11:55",
+      "color": "#B43A2F",
+      "color2": "#FFFFFF"
     },
     {
       "n": "Lnuch",
-      "tid": "12:10-12:30"
+      "tid": "12:10-12:30",
+      "color": "#FFFFFF",
+      "color2": "#000000"
     },
     {
       "n": "SO",
-      "tid": "12:30-13:20"
+      "tid": "12:30-13:20",
+      "color": "#9D2F52",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "ASVSV",
-      "tid": "13:25-14:20"
+      "n": "Språk",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     },
     {
       "n": "test",
-      "tid": "16:55-20:20"
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "test",
+      "tid": "13:25-14:20",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     }
   ],
 
   "tis": [
     {
       "n": "MA",
-      "tid": "08:15-09:15"
+      "tid": "08:15-09:15",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "ASVSV",
-      "tid": "09:20-09:35"
+      "n": "Språk",
+      "tid": "09:20-09:35",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     },
     {
       "n": "SV",
-      "tid": "10:40-11:25"
+      "tid": "10:40-11:25",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
     },
     {
       "n": "Lnuch",
-      "tid": "11:25-11:45"
+      "tid": "11:25-11:45",
+      "color": "#FFFFFF",
+      "color2": "#000000"
     },
     {
       "n": "SO",
-      "tid": "11:45-12:45"
+      "tid": "11:45-12:45",
+      "color": "#9D2F52",
+      "color2": "#FFFFFF"
     },
     {
       "n": "NO",
-      "tid": "12:50-13:35"
+      "tid": "12:50-13:35",
+      "color": "#7C9E39",
+      "color2": "#FFFFFF"
     },
     {
       "n": "IDH",
-      "tid": "13:50-14:30"
+      "tid": "13:50-14:30",
+      "color": "#B43A2F",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "ASVSV",
-      "tid": "14:45-15:35"
+      "n": "Språk",
+      "tid": "14:45-15:35",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     }
   ],
 
   "ons": [
     {
       "n": "MA",
-      "tid": "12:00-13:99"
+      "tid": "08:15-09:00",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "BL",
+      "tid": "09:20-10:20",
+      "color": "#BD6621",
+      "color2": "#FFFFFF"
     },
     {
       "n": "SV",
-      "tid": "12:00-13:99"
+      "tid": "10:30-11:10",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "SV",
-      "tid": "12:00-13:99"
+      "n": "Lnuch",
+      "tid": "11:25-11:45",
+      "color": "#FFFFFF",
+      "color2": "#000000"
+    },
+    {
+      "n": "IDH",
+      "tid": "11:40-13:00",
+      "color": "#B43A2F",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "EN",
+      "tid": "13:15-14:10",
+      "color": "#4C275D",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "Språk",
+      "tid": "14:10-14:30",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     }
   ],
 
   "tor": [
     {
       "n": "MA",
-      "tid": "12:00-13:99"
+      "tid": "08:15-09:15",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "SV",
-      "tid": "12:00-13:99"
+      "n": "Språk",
+      "tid": "09:20-09:35",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "SV",
-      "tid": "12:00-13:99"
+      "n": "SL",
+      "tid": "09:40-11:05",
+      "color": "#25305C",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "Lnuch",
+      "tid": "11:10-11:30",
+      "color": "#FFFFFF",
+      "color2": "#000000"
+    },
+    {
+      "n": "SO",
+      "tid": "11:30-12:30",
+      "color": "#9D2F52",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "NO",
+      "tid": "12:40-13:05",
+      "color": "#7C9E39",
+      "color2": "#FFFFFF"
     }
   ],
 
   "fre": [
     {
+      "n": "HKK",
+      "tid": "08:15-09:55",
+      "color": "#2A6FAD",
+      "color2": "#FFFFFF"
+    },
+    {
       "n": "MA",
-      "tid": "12:00-13:99"
+      "tid": "10:10-11:10",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
     },
     {
-      "n": "SV",
-      "tid": "12:00-13:99"
+      "n": "Lnuch",
+      "tid": "11:10-11:30",
+      "color": "#FFFFFF",
+      "color2": "#000000"
     },
     {
-      "n": "SV",
-      "tid": "12:00-13:99"
+      "n": "SO",
+      "tid": "11:40-12:40",
+      "color": "#9D2F52",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "NO",
+      "tid": "12:50-12:50",
+      "color": "#7C9E39",
+      "color2": "#FFFFFF"
     }
   ]
 }
-
-
