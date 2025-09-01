@@ -1,7 +1,7 @@
 {
   "name": "SchemaApp",
   "short_name": "Schema",
-  "start_url": "/william-w.se/web/pwa-app",
+  "start_url": "/app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
@@ -30,10 +30,11 @@
       "name": "Schema-widget",
       "description": "Visar nästa jobb i schemat",
       "id": "schema-widget",
-      "src": "/widget.html",
+      "src": "/app/widget.html",
       "width": 300,
       "height": 150
     }
   ]
 
 }
+
