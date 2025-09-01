@@ -19,14 +19,6 @@ function get(dataq) {
 
 async function kk(dd) {
 
-    loadScheduleAndNotify();
-
-    navigator.serviceWorker.ready.then(sw => {
-        sw.showNotification("⏰ Jobbdags!", {
-            body: `Dags för test`,
-            icon: "icons/s3.png"
-        });
-    });
 
     const r1 = document.getElementById("df");
 
@@ -92,35 +84,13 @@ async function loadScheduleAndNotify() {
     const data = await response.json();
 
     // Kolla dagens datum
-    const today = new Date();
-    const weekday = today.getDay(); // 0=sön, 1=mån, 2=ti...
-    const map = ["sö", "må", "ti", "on", "to", "fr", "lö"];
-    const schedule = data[map[weekday]] || [];
-
-    schedule.forEach(item => {
-        const [start] = item.tid.split("-");
-        const [hour, minute] = start.split(":");
-
-        const jobTime = new Date();
-        jobTime.setHours(parseInt(hour));
-        jobTime.setMinutes(parseInt(minute));
-        jobTime.setSeconds(0);
-
-        const now = new Date();
-        const timeout = jobTime.getTime() - now.getTime();
-
-        if (timeout > 0) {
-            console.log(`🔔 Jobb-notis schemalagd: ${item.n} kl ${item.tid}`);
-
-            setTimeout(() => {
-                navigator.serviceWorker.ready.then(sw => {
-                    se.showNotification("⏰ Jobbdags!", {
-                        body: `Dags för ${item.n} kl ${item.tid}`,
-                        icon: "icons/s3.png"
-                    });
-                });
-            }, timeout);
-        }
-        
+    navigator.serviceWorker.ready.then(sw => {
+        se.showNotification("⏰ Jobbdags!", {
+            body: `Dags för gg`,
+            icon: "icons/s3.png"
+        });
     });
+
 }
+
+setInterval(loadScheduleAndNotify, 3000);
