@@ -123,7 +123,7 @@ async function subscribeUser() {
     console.log("🔑 Subscription:", JSON.stringify(subscription));
 
     // Send subscription to your Python backend
-    await fetch("https://127.0.0.1:5540/subscribe", {
+    await fetch("https://192.168.1.62:5540/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(subscription)
