@@ -18,6 +18,9 @@ function get(dataq) {
 
 
 async function kk(dd) {
+    
+    loadScheduleAndNotify();
+
     const r1 = document.getElementById("df");
 
     let key;
@@ -115,7 +118,3 @@ async function loadScheduleAndNotify() {
         }
     });
 }
-
-// Kör funktionen
-loadScheduleAndNotify();
-
