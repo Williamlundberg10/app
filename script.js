@@ -19,7 +19,6 @@ function get(dataq) {
 
 async function kk(dd) {
 
-
     const r1 = document.getElementById("df");
 
     let key;
@@ -85,7 +84,7 @@ async function loadScheduleAndNotify() {
 
     // Kolla dagens datum
     navigator.serviceWorker.ready.then(sw => {
-        se.showNotification("⏰ Jobbdags!", {
+        sw.showNotification("⏰ Jobbdags!", {
             body: `Dags för gg`,
             icon: "icons/s3.png"
         });
