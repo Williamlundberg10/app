@@ -5,6 +5,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
+  "description": "SchemaApp by William Lundberg.",
   "icons": [
     {
       "src": "icons/s3.png",
@@ -24,6 +25,13 @@
       "sizes": "360x640",
       "type": "image/png"
     }
-  ]
-
+  ],
+  "related_applications": [
+    {
+      "platform": "SchemaApp",
+      "id": "6584575446",
+      "url": "https://williamlundberg10.github.io/app/"
+    }
+  ],
+  "prefer_related_applications": true
 }
