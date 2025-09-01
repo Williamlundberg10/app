@@ -114,10 +114,12 @@ async function subscribeUser() {
         return;
     }
 
+    const publicVapidKey = "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw="; // no padding, base64url
     const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw="
+        applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
     });
+
 
     console.log("🔑 Subscription:", JSON.stringify(subscription));
 
@@ -130,3 +132,18 @@ async function subscribeUser() {
 }
 
 subscribeUser();
+
+function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
+        .replace(/-/g, '+')
+        .replace(/_/g, '/');
+
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+}
