@@ -1,12 +1,12 @@
 const CACHE_NAME = "pwa-cache-v2";
 const FILES_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/script.js",
-  "/manifest.json",
-  "/icons/s3.png",   // correct icon
-  "/data.json"
+  "/app/",
+  "/app/index.html",
+  "/app/styles.css",
+  "/app/script.js",
+  "/app/manifest.json",
+  "/app/icons/s3.png",   // correct icon
+  "/app/data.json"
 ];
 
 
