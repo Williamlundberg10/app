@@ -105,7 +105,7 @@ async function subscribeUser() {
         return;
     }
 
-    const registration = await navigator.serviceWorker.register("/service-worker.js");
+    const registration = await navigator.serviceWorker.register("/app/service-worker.js");
     console.log("✅ Service Worker Registered");
 
     const permission = await Notification.requestPermission();
