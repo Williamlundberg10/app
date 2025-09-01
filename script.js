@@ -114,7 +114,7 @@ async function subscribeUser() {
         return;
     }
 
-    const publicVapidKey = "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw"; // removed '='
+    const publicVapidKey = "BF1anOjivoN0_qYPAg1IPhqEK3GRN_TgNsjuOpvJaMN5d-e7T_HHACgEhrRl1fbYw77tDPuyDjHsRnQgQr1T6Es"; // removed '='
     const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
