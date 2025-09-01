@@ -113,7 +113,7 @@ async function subscribeUser() {
         alert("You need to allow notifications!");
         return;
     }
-    
+
     const publicVapidKey = "BAzsq18bt8Rq6urtFJJin5JPA8i0U3qpYD_32rz6w4CLlYI9D16CqMv_7Hgxu_exFfGZWLu-H1wg7Coc4-wqVBw"; // removed '='
     const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
@@ -123,7 +123,7 @@ async function subscribeUser() {
     console.log("🔑 Subscription:", JSON.stringify(subscription));
 
     // Send subscription to your Python backend
-    await fetch("/subscribe", {
+    await fetch("https://127.0.0.1:5540/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(subscription)
@@ -147,3 +147,5 @@ function urlBase64ToUint8Array(base64String) {
     }
     return outputArray;
 }
+
+
