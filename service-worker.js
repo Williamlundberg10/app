@@ -1,21 +1,31 @@
-const CACHE_NAME = "pwa-cache-v1";
+const CACHE_NAME = "pwa-cache-v2";
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
   "/styles.css",
   "/script.js",
-  "/manifest.json"
+  "/manifest.json",
+  "/icons/s3.png",   // correct icon
+  "/data.json"
 ];
+
 
 // Install Service Worker & Cache Files
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(FILES_TO_CACHE);
+    caches.open(CACHE_NAME).then(async (cache) => {
+      for (const file of FILES_TO_CACHE) {
+        try {
+          await cache.add(file);
+        } catch (err) {
+          console.warn("Misslyckades med att cacha:", file, err);
+        }
+      }
     })
   );
   self.skipWaiting();
 });
+
 
 // Activate & Clean Old Caches
 self.addEventListener("activate", (event) => {
