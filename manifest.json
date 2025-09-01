@@ -1,0 +1,39 @@
+{
+  "name": "SchemaApp",
+  "short_name": "Schema",
+  "start_url": "/william-w.se/web/pwa-app",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196f3",
+  "icons": [
+    {
+      "src": "icons/s3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/s1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/s2.png",
+      "sizes": "360x640",
+      "type": "image/png"
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Schema-widget",
+      "description": "Visar nästa jobb i schemat",
+      "id": "schema-widget",
+      "src": "/widget.html",
+      "width": 300,
+      "height": 150
+    }
+  ]
+
+}

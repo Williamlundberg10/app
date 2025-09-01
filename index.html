@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My PWA App</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="My PWA App">
+  <link rel="apple-touch-icon" href="icons/s3.png">
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#2196f3">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mm">
+        <div id="df">
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="aa">
+                <h1>SV</h1>
+                <h2>12:00-13:00</h2>
+            </div>
+            <div class="nn">
+            </div>
+        </div>
+
+        <div class="asq">
+            <button onclick="kk(1)" id="qq_1" class="c q">mån</button>
+            <button onclick="kk(2)" id="qq_2" class="c q">tis</button>
+            <button onclick="kk(3)" id="qq_3" class="c">ons</button>
+            <button onclick="kk(4)" id="qq_4" class="c q">tor</button>
+            <button onclick="kk(5)" id="qq_5" class="c q">fre</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.error("Service Worker Failed:", err));
+    }
+  </script>
+</body>
+</html>
+

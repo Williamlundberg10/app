@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schema Widget</title>
+<style>
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background: #2196f3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1 { font-size: 18px; margin: 5px; }
+h2 { font-size: 14px; margin: 3px; }
+</style>
+</head>
+<body>
+<div>
+    <h1 id="jobbNamn">Laddar schema...</h1>
+    <h2 id="jobbTid"></h2>
+</div>
+
+<script>
+async function loadNextJob() {
+    try {
+        const response = await fetch("data.json");
+        const data = await response.json();
+
+        const today = new Date();
+        const map = ["sö","må","ti","on","to","fr","lö"];
+        const todayKey = map[today.getDay()] || "må";
+        const schedule = data[todayKey] || [];
+
+        const now = new Date();
+        const nextJob = schedule.find(item => {
+            const [start] = item.tid.split("-");
+            const [hour, min] = start.split(":").map(Number);
+            const jobTime = new Date();
+            jobTime.setHours(hour, min, 0, 0);
+            return jobTime > now;
+        });
+
+        if(nextJob){
+            document.getElementById("jobbNamn").innerText = nextJob.n;
+            document.getElementById("jobbTid").innerText = nextJob.tid;
+        } else {
+            document.getElementById("jobbNamn").innerText = "Inga jobb kvar idag!";
+            document.getElementById("jobbTid").innerText = "";
+        }
+    } catch(err) {
+        document.getElementById("jobbNamn").innerText = "Fel vid hämtning!";
+        console.error(err);
+    }
+}
+
+// Load widget on start
+loadNextJob();
+
+// Optional: refresh every 5 minutes
+setInterval(loadNextJob, 300000);
+</script>
+</body>
+</html>
