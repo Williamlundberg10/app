@@ -5,8 +5,7 @@ const FILES_TO_CACHE = [
   "/app/styles.css",
   "/app/script.js",
   "/app/manifest.json",
-  "/app/icons/s3.png",   // correct icon
-  "/app/data.json"
+  "/app/icons/s3.png"
 ];
 
 
@@ -69,4 +68,5 @@ self.addEventListener('push', e => {
     e.waitUntil(
         self.registration.showNotification(data.title, options)
     );
+
 });
