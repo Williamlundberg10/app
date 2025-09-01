@@ -30,11 +30,10 @@
       "name": "Schema-widget",
       "description": "Visar nästa jobb i schemat",
       "id": "schema-widget",
-      "src": "/app/widget.html",
+      "src": "/widget.html",
       "width": 300,
       "height": 150
     }
   ]
 
 }
-

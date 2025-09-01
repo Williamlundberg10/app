@@ -50,3 +50,11 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
+
+self.addEventListener("periodicsync", async event => {
+    if(event.tag === "update-schema"){
+        console.log("🔄 Uppdaterar widget-data i bakgrunden...");
+        await fetch("/data.json"); // fetch fresh data
+    }
+});
+
