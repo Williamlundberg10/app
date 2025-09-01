@@ -4,7 +4,8 @@ const FILES_TO_CACHE = [
   "/app/index.html",
   "/app/styles.css",
   "/app/manifest.json",
-  "/app/icons/s3.png"
+  "/app/icons/s3.png",
+  "/app/data.json"
 ];
 
 
