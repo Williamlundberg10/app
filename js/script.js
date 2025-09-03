@@ -53,7 +53,7 @@ function get(dataq) {
 }
 
 function get11() {
-    return fetch("/data/class_codes.json")
+    return fetch("/app/data/class_codes.json")
         .then(response => {
             if (!response.ok) throw new Error("Failed to load class_codes.json");
             return response.json();

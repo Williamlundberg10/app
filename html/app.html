@@ -6,26 +6,26 @@
   <title>SchemaApp</title>
 
   <!-- PWA Manifest -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="/app/manifest.json">
 
   <!-- iOS Support -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="SchemaApp">
-  <link rel="apple-touch-icon" href="/icons/s3.png">
+  <link rel="apple-touch-icon" href="/app/icons/s3.png">
 
   <!-- Theme Colors -->
   <meta name="theme-color" content="#FFFFFF">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/app/css/styles.css">
 </head>
 <body>
 
     <div class="mm">
         <div class="asqc">
           <button id="aa_1" class="an">7-9D2</button>
-            <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="a"><img class="nxx" src="/icons/settings.svg" alt=""></button>
+            <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="a"><img class="nxx" src="/app/icons/settings.svg" alt=""></button>
 
         </div>
 
@@ -42,11 +42,11 @@
     </div>
 
 
-    <script src="/js/script.js"></script>
+    <script src="/app/js/script.js"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/js/service-worker.js")
+      navigator.serviceWorker.register("/app/js/service-worker.js")
         .then(() => console.log("✅ Service Worker Registered"))
         .catch(err => console.error("Service Worker Failed:", err));
     }

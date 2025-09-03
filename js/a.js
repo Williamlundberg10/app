@@ -21,12 +21,12 @@ function pq(){
 
 function aq(){
     
-    window.location.href = "/html/settings.html";
+    window.location.href = "/app/html/settings.html";
 }
 
 function logout() {
     localStorage.clear();
-    window.location.href = "/html/s.html";
+    window.location.href = "/app/html/s.html";
     console.log("Logged out and localStorage cleared!");
 }
 

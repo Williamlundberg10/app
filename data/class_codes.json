@@ -2,11 +2,11 @@
     {
         "code": "123456",
         "class_name": "7-9D",
-        "data_url": "/data/data.json"
+        "data_url": "/app/data/data.json"
     },
     {
         "code": "122",
         "class_name": "TEST_34",
-        "data_url": "/data/test.json"
+        "data_url": "/app/data/test.json"
     }
 ]
