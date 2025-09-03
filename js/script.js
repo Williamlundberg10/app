@@ -10,7 +10,6 @@ window.onload = function() {
 
     get21().then(vv => {
 
-        const found = vv.find(item => item.v);
         console.log(vv.v)
     });
 };
