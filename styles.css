@@ -176,7 +176,7 @@ body{
 
 .asqc{
     position: fixed;
-    top: 5px;
+    bottom: 20px;
     display: flex;
     flex-direction: row;
     gap: 5px;
