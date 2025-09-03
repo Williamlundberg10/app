@@ -107,8 +107,8 @@ async function kk(dd) {
     const today = new Date();
     const hours = today.getHours().toString().padStart(2, '0');
     const minutes = today.getMinutes().toString().padStart(2, '0');
-    const currentTime1 = `02:40`;
-    const currentTime = `${hours}:${minutes - 1}`;
+    const currentTime = `08:50`;
+    const currentTime1 = `${hours}:${minutes - 1}`;
 
     console.log(currentTime);
     r1.innerHTML = ""
@@ -123,7 +123,7 @@ async function kk(dd) {
         console.log(currentTime ,  item.tid)
         console.log(tid_1 ,  tid_2)
 
-        if(currentTime < item.tid){
+        if(currentTime < tid_2){
             r1.innerHTML += `
                 <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
                     <h1>${item.n}</h1>
