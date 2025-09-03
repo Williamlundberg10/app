@@ -1,7 +1,7 @@
 {
   "name": "SchemaApp",
   "short_name": "Schema",
-  "start_url": "/app/html/app.html",
+  "start_url": "/app/app.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",

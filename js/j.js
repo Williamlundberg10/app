@@ -16,7 +16,7 @@ function bb() {
         if (found) {
             localStorage.setItem("class_code", inputValue);
             console.log("Class code saved:", inputValue);
-            window.location.href = "/app/html/app.html";
+            window.location.href = "/app/html/home.html";
         } else {
             v.value = ""
             v.placeholder = "Class not found!"
