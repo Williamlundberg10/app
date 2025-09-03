@@ -14,7 +14,7 @@ window.onload = function() {
         if(getCookie("app_version") == null){
             setCookie("app_version", dddd);
         }else{
-            if(dddd < getCookie("app_version")){
+            if(dddd > getCookie("app_version")){
                 document.getElementById("ggrr").className = "aaq1 qq"
             }
         }
