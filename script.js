@@ -69,6 +69,8 @@ async function kk(dd) {
     console.log(currentTime);
     r1.innerHTML = ""
     r11.innerHTML = ""
+    
+    r1.innerHTML += "<div class='nn'></div>"
 
     r2.forEach(item => {
         console.log(r2.length)
@@ -95,7 +97,7 @@ async function kk(dd) {
 }
 
 function pq(){
-    
+
     caches.keys().then((cacheNames) =>
       Promise.all(
         cacheNames.map((cache) => {
