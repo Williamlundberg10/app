@@ -117,8 +117,11 @@ async function kk(dd) {
     r1.innerHTML += "<div class='nn1'></div>"
 
     r2.forEach(item => {
+        var tid_1 = item.tid.slice(0, 5);
+        var tid_2 = item.tid.slice(6, 11);
         console.log(r2.length)
         console.log(currentTime ,  item.tid)
+        console.log(tid_1 ,  tid_2)
 
         if(currentTime < item.tid){
             r1.innerHTML += `
