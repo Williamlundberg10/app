@@ -47,7 +47,7 @@ function pqrr(){
       )
     )
     setCookie("app_version", dddd);
-    window.location.reload();
+    window.location.reload(true);
 }
 
 

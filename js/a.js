@@ -17,6 +17,7 @@ function pq(){
         })
       )
     )
+    window.location.reload(true);
 }
 
 function aq(){
