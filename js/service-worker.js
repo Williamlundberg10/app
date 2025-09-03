@@ -1,21 +1,6 @@
-const CACHE_NAME = "pwa-cache-v2";
+const CACHE_NAME = "pwa-cache-v3";
 const FILES_TO_CACHE = [
-  "/app/css/styles.css",
-  "/app/data/class_codes.json",
-  "/app/data/data.json",
-  "/app/data/test.json",
-  "/app/html/home.html",
-  "/app/html/s.html",
-  "/app/html/settings.html",
-  "/app/icons/home.svg",
-  "/app/icons/s1.svg",
-  "/app/icons/s2.svg",
-  "/app/icons/s3.svg",
-  "/app/icons/settings.svg",
-  "/app/js/a.js",
-  "/app/js/j.js",
-  "/app/js/script.js",
-  "/app/app.html"
+
 ];
 
 
