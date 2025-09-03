@@ -15,7 +15,8 @@ const FILES_TO_CACHE = [
   "/app/js/a.js",
   "/app/js/j.js",
   "/app/js/script.js",
-  "/app/js/service-worker.js"
+  "/app/js/service-worker.js",
+  "/app/app.html"
 ];
 
 
