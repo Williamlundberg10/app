@@ -115,6 +115,14 @@
     margin: 10px;
 }
 
+.nn1{
+    display: flex;
+    width: 330px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
 
 body{
     overflow-x: hidden;

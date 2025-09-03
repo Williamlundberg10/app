@@ -69,8 +69,8 @@ async function kk(dd) {
     console.log(currentTime);
     r1.innerHTML = ""
     r11.innerHTML = ""
-    
-    r1.innerHTML += "<div class='nn'></div>"
+
+    r1.innerHTML += "<div class='nn1'></div>"
 
     r2.forEach(item => {
         console.log(r2.length)
