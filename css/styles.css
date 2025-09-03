@@ -381,3 +381,28 @@ body{
     justify-content: center;
     overflow-y: scroll;
 }
+
+.aaq1{
+    position: fixed;
+    transition-duration: 0.8s;
+    bottom: 50px ;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 320px;
+    height: 50px;
+    border-radius: 200px;
+    border-color: rgba(220, 220, 220, 0.5);
+    border-style: solid;
+    border-width: 3px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(0px);
+    &.qq{
+      transform: translateY(150px);
+    }
+}

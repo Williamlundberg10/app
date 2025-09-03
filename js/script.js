@@ -9,10 +9,44 @@ window.onload = function() {
     }
 
     get21().then(vv => {
+        var dddd = vv.v
+        if(getCookie("app_version") == null){
+            setCookie("app_version", dddd);
+        }else{
 
-        console.log(vv.v)
+        }
+        console.log(dddd)
     });
 };
+
+function setCookie(name, value, days = 365) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+}
+
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (let i = 0; i < cookies.length; i++) {
+    const [key, value] = cookies[i].split("=");
+    if (key === name) return value;
+  }
+  return null;
+}
+
+function pqrr(){
+
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cache) => {
+          caches.delete(cache);
+        })
+      )
+    )
+    setCookie("app_version", dddd);
+    window.location.reload();
+}
+
 
 function logout() {
     localStorage.clear();
