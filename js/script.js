@@ -7,6 +7,12 @@ window.onload = function() {
     if(localStorage.getItem("class_code") == null){
         logout()
     }
+
+    get21().then(vv => {
+
+        const found = vv.find(item => item.code === localStorage.getItem("class_code"));
+        console.log(vv.v)
+    });
 };
 
 function logout() {
@@ -64,6 +70,17 @@ function get11() {
         });
 }
 
+function get21() {
+    return fetch("/app/v.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load class_codes.json");
+            return response.json();
+        })
+        .catch(error => {
+            console.error("Error loading JSON:", error);
+            return null;
+        });
+}
 
 
 
