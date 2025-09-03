@@ -118,6 +118,7 @@ async function kk(dd) {
 
     r2.forEach(item => {
         console.log(r2.length)
+        console.log(currentTime ,  item.tid)
 
         if(currentTime < item.tid){
             r1.innerHTML += `
