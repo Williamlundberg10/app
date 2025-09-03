@@ -93,3 +93,14 @@ async function kk(dd) {
     r1.className = "rr ee"
     r11.className = "r1r ee"
 }
+
+function pq(){
+    
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cache) => {
+          caches.delete(cache);
+        })
+      )
+    )
+}
