@@ -1,3 +1,4 @@
+var dddd = 0
 window.onload = function() {
     document.getElementById("dee").className = "asq"
     const today = new Date().getDay();
@@ -9,7 +10,7 @@ window.onload = function() {
     }
 
     get21().then(vv => {
-        var dddd = vv.v
+        dddd = vv.v
         if(getCookie("app_version") == null){
             setCookie("app_version", dddd);
         }else{
