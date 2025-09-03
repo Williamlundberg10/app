@@ -20,6 +20,28 @@ function pq(){
     window.location.reload(true);
 }
 
+async function forceCloseApp() {
+  // Unregister all service workers
+  if ('serviceWorker' in navigator) {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    for (const registration of registrations) {
+      await registration.unregister();
+      console.log("🛑 Service Worker stopped");
+    }
+  }
+
+  // Clear all caches
+  if ('caches' in window) {
+    const cacheNames = await caches.keys();
+    await Promise.all(cacheNames.map(name => caches.delete(name)));
+    console.log("🧹 All caches cleared");
+  }
+
+  // Optionally reload the app (now in "clean" mode)
+  window.location.reload();
+}
+
+
 function aq(){
     
     window.location.href = "/app/html/settings.html";
