@@ -64,6 +64,7 @@ function get(dataq) {
     return get11().then(vv => {
         if (!vv) {
             console.error("Could not load class codes!");
+            logout()
             return null;
         }
 
