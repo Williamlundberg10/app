@@ -44,12 +44,12 @@ async function forceCloseApp() {
 
 function aq(){
     
-    window.location.href = "/app/html/settings.html";
+    window.location.href = "../html/settings.html";
 }
 
 function logout() {
     localStorage.clear();
-    window.location.href = "/app/html/s.html";
+    window.location.href = "../html/s.html";
     console.log("Logged out and localStorage cleared!");
 }
 

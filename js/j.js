@@ -16,7 +16,7 @@ function bb() {
         if (found) {
             localStorage.setItem("class_code", inputValue);
             console.log("Class code saved:", inputValue);
-            window.location.href = "/app/html/home.html";
+            window.location.href = "../html/home.html";
         } else {
             v.value = ""
             v.placeholder = "Class not found!"
@@ -26,7 +26,7 @@ function bb() {
 }
 
 function get1() {
-    return fetch("/app/data/class_codes.json")
+    return fetch("../data/class_codes.json")
         .then(response => {
             if (!response.ok) throw new Error("Failed to load class_codes.json");
             return response.json();
