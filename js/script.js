@@ -1,9 +1,11 @@
+import TimeDiff from '../Library/time.js';
+
 var dddd = 0
+var today1 = new Date().getDay();
 window.onload = function() {
     document.getElementById("dee").className = "asq"
-    const today = new Date().getDay();
-    console.log(today)
-    kk(today);
+    console.log(today1)
+    kk(today1);
 
     if(localStorage.getItem("class_code") == null){
         logout()
@@ -161,28 +163,73 @@ async function kk(dd) {
     const today = new Date();
     const hours = today.getHours().toString().padStart(2, '0');
     const minutes = today.getMinutes().toString().padStart(2, '0');
-    const currentTime1 = `08:50`;
-    const currentTime = `${hours}:${minutes}`;
+    const currentTime = `07:05`;
+    const currentTime1 = `${hours}:${minutes}`;
 
     console.log(currentTime);
     r1.innerHTML = ""
     r11.innerHTML = ""
 
     r1.innerHTML += "<div class='nn1'></div>"
-
+    var unnn = -2
+    var unnn1 = -1
     r2.forEach(item => {
+        unnn ++
+        unnn1 ++
         var tid_1 = item.tid.slice(0, 5);
         var tid_2 = item.tid.slice(6, 11);
-        console.log(r2.length)
-        console.log(currentTime ,  item.tid)
-        console.log(tid_1 ,  tid_2)
+        var time_11 = TimeDiff.getDifference(currentTime, tid_1)
+        var time_12 = TimeDiff.getDifference(currentTime, tid_2)
+        var time_13 = {};
+        if (r2[unnn] && r2[unnn].tid) {
+            time_13 = TimeDiff.getDifference(r2[unnn].tid.slice(6, 11),tid_1);
+        }
+        var time_14 = "";
+        if (r2[unnn] && r2[unnn].tid) {
+            time_14 = r2[unnn1].tid.slice(0, 5)
+        }
 
-        if(currentTime < tid_2){
-            r1.innerHTML += `
-                <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
-                    <h1>${item.n}</h1>
-                    <h2>${item.tid}</h2>
-                </div>`
+        console.log(tid_1, time_13);
+
+        if(time_13.totalMinutes != null && time_14 > currentTime && dd == today1 && localStorage.getItem("ss_data_ccccc") != "true"){
+            if(time_13.totalMinutes < 10 ){
+                r1.innerHTML += `
+                    <div class="qqaaa">
+                        <div class="qq1aaa">
+                            <h1>Paus</h1>
+                            <div class="qqqqw">${time_13.totalMinutes} minuter</div>
+                        </div>
+                    </div>`
+            }else{
+                r1.innerHTML += `
+                    <div class="qqaaa">
+                        <div class="qq1aaa">
+                            <h1>Rast</h1>
+                            <div class="qqqqw">${time_13.totalMinutes} minuter</div>
+                        </div>
+                    </div>`
+            }
+        }
+        if(currentTime < tid_2 && dd == today1){
+            if(currentTime < tid_1){
+                r1.innerHTML += `
+                    <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
+                        <div style="color: ${item.color2};" class="heeeq">
+                            <h1>${item.n}</h1>
+                            <div class="qqqqw">${item.tid}</div>
+                        </div>
+                        <div class="qqqqwq">Lektionen börjar om ${time_11.totalMinutes} minuter</div>
+                    </div>`
+            }else{
+                r1.innerHTML += `
+                    <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
+                        <div style="color: ${item.color2};" class="heeeq">
+                            <h1>${item.n}</h1>
+                            <div class="qqqqw">${item.tid}</div>
+                        </div>
+                        <div class="qqqqwq">Lektionen slutar om ${time_12.totalMinutes} minuter</div>
+                    </div>`
+            }
         }else{
             r11.innerHTML += `
                 <div style="background-color: #b9b9b9; color: #ffffffff;" class="aaa">
@@ -199,3 +246,6 @@ async function kk(dd) {
     r1.className = "rr ee"
     r11.className = "r1r ee"
 }
+
+
+window.kk = kk;  // now the inline onclick can access it
