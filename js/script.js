@@ -155,6 +155,9 @@ async function kk(dd) {
     document.getElementById("qq_4").className = " c q"
     document.getElementById("qq_5").className = " c q"
     r3.className = " c"
+    if(dd == today1){
+        r3.style.backgroundColor = "#465f53ff" 
+    }
 
     if (!r2) {
         r1.innerHTML = "<p>No data found for this day.</p>";
@@ -211,8 +214,8 @@ async function kk(dd) {
                     </div>`
             }
         }
-        if(currentTime < tid_2 && dd == today1){
-            if(currentTime < tid_1){
+        if(currentTime < tid_2 || dd !== today1){
+            if(currentTime < tid_1 && dd == today1){
                 r1.innerHTML += `
                     <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
                         <div style="color: ${item.color2};" class="heeeq">
@@ -220,6 +223,14 @@ async function kk(dd) {
                             <div class="qqqqw">${item.tid}</div>
                         </div>
                         <div class="qqqqwq">Lektionen börjar om ${time_11.totalMinutes} minuter</div>
+                    </div>`
+            }else if(dd !== today1){
+                r1.innerHTML += `
+                    <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">
+                        <div style="color: ${item.color2};" class="heeeq">
+                            <h1>${item.n}</h1>
+                            <div class="qqqqw">${item.tid}</div>
+                        </div>
                     </div>`
             }else{
                 r1.innerHTML += `
