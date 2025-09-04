@@ -164,8 +164,8 @@ async function kk(dd) {
     const today = new Date();
     const hours = today.getHours().toString().padStart(2, '0');
     const minutes = today.getMinutes().toString().padStart(2, '0');
-    const currentTime = `07:05`;
-    const currentTime1 = `${hours}:${minutes}`;
+    const currentTime1 = `07:05`;
+    const currentTime = `${hours}:${minutes}`;
 
     console.log(currentTime);
     r1.innerHTML = ""
