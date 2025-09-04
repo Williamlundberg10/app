@@ -408,3 +408,57 @@ body{
       display: flex;
     }
 }
+
+.mmmm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.mmmmm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.asss{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+
+.nnndd{
+  transition-duration: 0.4s;
+  border-radius: 50px;
+  animation: rr111 3.5s infinite;
+}
+
+@keyframes rr111 {
+  0% {
+    background-color: #00c3ff;
+  }
+  20% {
+    background-color: #ff00f2;
+  }
+  40% {
+    background-color: #ff0022;
+  }
+  60% {
+    background-color: #ff00bf;
+  }
+  80% {
+    background-color: #003cff;
+  }
+  100% {
+    background-color: #00c3ff;
+  }
+}
