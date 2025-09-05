@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/s3.png">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <title>SchemaApp</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SchemaApp">
+  <link rel="apple-touch-icon" href="/icons/s3.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    
+
+    <div class="mmx">
+      <div class="mmmmm">
+        <img src="../icons/s3.png" class="nnndd">
+        <div class="asss">SchemaApp</div>
+      </div>
+      <div class="mmmm">
+        <div id="gtt" style="display: none;" class="alllq">
+            <div class="YTREVB">
+                <img class="jhyy t" src="/icons/compass.png">
+                <div class="qwwwdd">Open this page in Safari</div>
+            </div>
+            <div class="YTREVB">
+                <img class="jhyy r" src="/icons/ios_share.svg">
+                <div class="qwwwdd">Click the "Share" button</div>
+            </div>
+            <div class="YTREVB">
+                <img class="jhyy" src="/icons/add.png">
+                <div class="qwwwdd">and choose "Add to Home Screen"</div>
+            </div>
+        </div>
+        <button id="qw" class="ggr122" style="display: none;">Install App</button>
+      </div>
+    </div>
+
+
+    <script>
+        var bb1 = document.getElementById("qw")
+        var bb11 = document.getElementById("gtt")
+        let deferredPrompt;
+        const os = getOS();
+        console.log("Detected OS:", os);
+
+        if(os == "Android"){
+            bb1.style.display = "flex"
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                bb1.style.display = 'block'; // Show button on Android
+            });
+            bb1.addEventListener('click', async () => {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+            });
+        }
+
+        if(os == "iOS"){
+            bb11.style.display = "flex"
+        }
+
+        function getOS() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // iOS detection
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+
+            // Android detection
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            return "Other";
+            }
+
+    </script>
+
 </body>
 </html>
+
