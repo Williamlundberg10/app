@@ -214,6 +214,7 @@ async function kk(dd) {
                     </div>`
             }
         }
+
         if(currentTime < tid_2 || dd !== today1){
             if(currentTime < tid_1 && dd == today1){
                 r1.innerHTML += `
