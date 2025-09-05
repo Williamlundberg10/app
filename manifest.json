@@ -7,7 +7,13 @@
   "theme_color": "#000000",
   "description": "SchemaApp by William Lundberg.",
   "orientation": "portrait",
-  "id": 646843,
+  "id": "william.ll.app",
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
+  "lang": "SV",
+  "dir": "ltr",
+  "launch_handler": {
+      "client_mode": ["navigate-existing", "auto"]
+  },
   "icons": [
     {
       "src": "icons/s3.png",
@@ -31,13 +37,6 @@
       "src": "icons/s2.png",
       "sizes": "360x640",
       "type": "image/png"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "SchemaApp",
-      "id": "6584575446",
-      "url": "https://williamlundberg10.github.io/app/"
     }
   ],
   "prefer_related_applications": true
