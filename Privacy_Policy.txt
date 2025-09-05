@@ -1,0 +1,38 @@
+
+Privacy Policy
+
+Last updated: September 5, 2025
+
+App Name: SchemaApp
+Developer: WilliamLundberg
+Website: https://williamlundberg10.github.io/app
+
+1. Introduction
+This app respects your privacy. I am the sole developer of this app, and I do NOT collect, store, or share any personal data from users.
+
+The app is designed to work locally on your device and does not send any data to external servers.
+
+2. Information Collection
+- No personal information is collected.
+- The app does NOT track you or monitor your activity.
+- The app does NOT use any third-party analytics or advertising services.
+
+3. Local Storage
+The app may store some data locally on your device to improve your experience.
+This data never leaves your device and is NOT shared with anyone.
+
+4. Internet Usage
+This app may connect to the internet ONLY to fetch data necessary for its features.
+However, no personal data is sent, collected, or stored on any server.
+
+5. Third-Party Services
+This app does NOT integrate with any third-party services, or tracking tools.
+
+6. Your Privacy
+Because the app does not collect any data, there is nothing for us to store, process, or share.
+All usage data remains on your device.
+
+7. Contact
+If you have any questions about this Privacy Policy, you can contact me:
+
+Email: williamlundberg10.jobb@gmail.com
