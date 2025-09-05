@@ -14,6 +14,11 @@
   "launch_handler": {
       "client_mode": ["navigate-existing", "auto"]
   },
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
   "icons": [
     {
       "src": "icons/s3.png",
