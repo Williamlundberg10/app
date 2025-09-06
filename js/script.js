@@ -3,6 +3,8 @@ import TimeDiff from '../Library/time.js';
 var dddd = 0
 var today1 = new Date().getDay();
 window.onload = function() {
+    const r111 = document.getElementById("aa_1");
+    r111.textContent = localStorage.getItem("data_name")
     document.getElementById("dee").className = "asq"
     console.log(today1)
     kk(today1);
@@ -129,7 +131,6 @@ async function kk(dd) {
 
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
-    const r111 = document.getElementById("aa_1");
     r1.className = "rr"
     r11.className = "r1r"
 
@@ -140,6 +141,8 @@ async function kk(dd) {
         case 3: key = "ons"; break;
         case 4: key = "tor"; break;
         case 5: key = "fre"; break;
+        case 6: key = "mån"; break;
+        case 7: key = "mån"; break;
         default: key = null;
     }
 
@@ -148,15 +151,15 @@ async function kk(dd) {
     localStorage.setItem("dd", dd)
 
     const r2 = await get(key);
-    const r3 = document.getElementById("qq_" + dd);
-    document.getElementById("qq_1").className = " c q"
-    document.getElementById("qq_2").className = " c q"
-    document.getElementById("qq_3").className = " c q"
-    document.getElementById("qq_4").className = " c q"
-    document.getElementById("qq_5").className = " c q"
+    const r3 = document.getElementById("qq_" + key);
+    document.getElementById("qq_mån").className = " c q"
+    document.getElementById("qq_tis").className = " c q"
+    document.getElementById("qq_ons").className = " c q"
+    document.getElementById("qq_tor").className = " c q"
+    document.getElementById("qq_fre").className = " c q"
     r3.className = " c"
     if(dd == today1){
-        r3.style.backgroundColor = "#465f53ff" 
+        r3.style.backgroundColor = "#e0e0e0ff" 
     }
 
     if (!r2) {
@@ -253,7 +256,6 @@ async function kk(dd) {
 
     r11.innerHTML += "<div class='nn'></div>"
 
-    r111.textContent = localStorage.getItem("data_name")
     console.log(localStorage.getItem("data_name"))
 
     r1.className = "rr ee"
