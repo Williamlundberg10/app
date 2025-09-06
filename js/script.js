@@ -3,8 +3,6 @@ import TimeDiff from '../Library/time.js';
 var dddd = 0
 var today1 = new Date().getDay();
 window.onload = function() {
-    const r111 = document.getElementById("aa_1");
-    r111.textContent = localStorage.getItem("data_name")
     document.getElementById("dee").className = "asq"
     console.log(today1)
     kk(today1);
@@ -74,6 +72,7 @@ function get(dataq) {
 
         // Find the saved class code
         const found = vv.find(item => item.code === localStorage.getItem("class_code"));
+        
 
         if (!found) {
             console.warn("Class code not found!");
@@ -82,6 +81,7 @@ function get(dataq) {
 
         console.log(found.data_url);
         localStorage.setItem("data_name",found.class_name)
+        document.getElementById("aa_1").textContent = found.class_name
 
         // Fetch the schedule data
         return fetch(found.data_url)
