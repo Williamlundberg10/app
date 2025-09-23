@@ -42,8 +42,8 @@
         <div onclick="pqrr()" id="ggrr" class="aaq1">
             <h3>Update</h3>
         </div>
-
-        <div id="dee" class="asq qq">
+        
+        <div style="display: none;" id="dee" class="asq qq">
             <button onclick="kk(1)" id="qq_mån" class="c q">Må</button>
             <button onclick="kk(2)" id="qq_tis" class="c q">Ti</button>
             <button onclick="kk(3)" id="qq_ons" class="c">On</button>
@@ -54,8 +54,22 @@
 
 
     <script type="module" src="../js/script.js"></script>
+    <script src="../Library/ui.js"></script>
 
   <script>
+    const wrapper = document.createElement("div");
+    document.body.appendChild(wrapper);
+
+    // Example usage
+    UIM.create({
+      buttons: ["Må", "Ti", "On", "To", "Fr"],
+      parent: wrapper,
+      default: new Date().getDay(), // 👈 starts on "Ti"
+      onRelease: (btn, id) => kk(id),
+      onClick:  (btn, id) => kk(id)
+    });
+
+
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register("../js/service-worker.js")
