@@ -1,5 +1,6 @@
 // UI-m Library
 const UIM = (function() {
+  var offs = 65
   // Inject global CSS (only once)
   if (!document.getElementById("uim-style")) {
     const style = document.createElement("style");
@@ -34,7 +35,7 @@ const UIM = (function() {
         .jf {
             position: absolute;
             display: flex;
-            width: 20%;
+            width: calc(20% - 10px);
             height: 75%;
             border-radius: 200px;
             border-color: rgba(255, 255, 255, 0.47);
@@ -48,6 +49,7 @@ const UIM = (function() {
             transition: left 150ms ease, top 150ms ease; /* smooth snap */
             touch-action: none; /* improve touch dragging */
             user-select: none;
+            
             
         }
 
@@ -63,12 +65,10 @@ const UIM = (function() {
             align-items: center;
             width: 100%;
             height: 100%;
-            font-size: 70px;
             font-family: "Archivo Black", sans-serif;
             font-weight: 400;
             font-style: normal;
             font-size: 25px;
-            margin-right: 5px;
         }
     `;
     document.head.appendChild(style);
@@ -105,7 +105,7 @@ const UIM = (function() {
     function addq(target) {
       const rect = target.getBoundingClientRect();
       const parentRect = container.getBoundingClientRect();
-      const targetCenterX = rect.left - parentRect.left + rect.width / 2;
+      const targetCenterX = rect.left - parentRect.left + rect.width - offs / 2;
       jf.style.left = targetCenterX - jf.offsetWidth / 2 + "px";
     }
 
@@ -123,7 +123,7 @@ const UIM = (function() {
 
       buttons.forEach(btn => {
         const r = btn.getBoundingClientRect();
-        const cx = r.left - parentRect.left + r.width / 2;
+        const cx = r.left - parentRect.left + r.width - offs / 2;
         const cy = r.top - parentRect.top + r.height / 2;
         const dist = Math.hypot(cx - jfCenterX, cy - jfCenterY);
         if (dist < minDist) {
