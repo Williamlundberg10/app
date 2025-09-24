@@ -1,6 +1,7 @@
-const CACHE_NAME = "pwa-cache-v1.17.2";
+const CACHE_NAME = "pwa-cache-v1.18";
 const FILES_TO_CACHE = [
-  "../html/home.html"
+  "../html/home.html",
+  "../html/settings.html"
 ];
 
 
