@@ -1,78 +1,88 @@
-window.onload = function() {
-    const r111 = document.getElementById("aa_1");
-    r111.textContent = localStorage.getItem("data_name")
-    document.getElementById("dee").className = "asq qq"
-    update_data("",1)
+import Lang from '../Library/lang.js';
 
+window.onload = async () => {
+    await Lang.init();
+
+    const savedLang = localStorage.getItem("ll1") || "sv";
+    Lang.set(savedLang);
+    localStorage.setItem("ll1", savedLang);
+
+    // Highlight selected language button
+    document.querySelectorAll('.aaq123').forEach(el => el.className = 'aaq123');
+    const langButton = document.getElementById("faa_" + savedLang);
+    if (langButton) langButton.className = "aaq123 rr";
+
+    // Set class name display
+    const dataNameEl = document.getElementById("aa_1");
+    if (dataNameEl) dataNameEl.textContent = localStorage.getItem("data_name");
+
+    document.getElementById("dee").className = "asq qq";
+
+    updateData("", true);
 };
 
-
-
-function pq(){
-
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map((cache) => {
-          caches.delete(cache);
-        })
-      )
-    )
+// Clear all caches and reload page
+async function pq() {
+    if ('caches' in window) {
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames.map(name => caches.delete(name)));
+    }
     window.location.reload(true);
 }
 
+// Force close app: unregister service workers + clear caches
 async function forceCloseApp() {
-  // Unregister all service workers
-  if ('serviceWorker' in navigator) {
-    const registrations = await navigator.serviceWorker.getRegistrations();
-    for (const registration of registrations) {
-      await registration.unregister();
-      console.log("🛑 Service Worker stopped");
+    if ('serviceWorker' in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (const reg of registrations) await reg.unregister();
+        console.log("🛑 Service Worker stopped");
     }
-  }
 
-  // Clear all caches
-  if ('caches' in window) {
-    const cacheNames = await caches.keys();
-    await Promise.all(cacheNames.map(name => caches.delete(name)));
-    console.log("🧹 All caches cleared");
-  }
+    if ('caches' in window) {
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames.map(name => caches.delete(name)));
+        console.log("🧹 All caches cleared");
+    }
 
-  // Optionally reload the app (now in "clean" mode)
-  window.location.reload();
+    window.location.reload();
 }
 
-
-function aq(){
-    
+// Navigate to settings page
+function aq() {
     window.location.href = "../html/settings.html";
 }
 
+// Logout: clear localStorage and redirect
 function logout() {
     localStorage.clear();
-    window.location.href = "../html/s.html";
     console.log("Logged out and localStorage cleared!");
+    window.location.href = "../html/s.html";
 }
 
-function update_data(data,g){
-    if(g != 1){
-        var qwe = document.getElementById(data)
-        localStorage.setItem("ss_data_" + data, qwe.checked)
-    }else{
+// Change language
+window.lla = async (lang) => {
+    await Lang.load("../data/lang.json");
+    Lang.set(lang);
+    localStorage.setItem("ll1", lang);
+
+    document.querySelectorAll('.aaq123').forEach(el => el.className = 'aaq123');
+    const selectedButton = document.getElementById("faa_" + lang);
+    if (selectedButton) selectedButton.className = "aaq123 rr";
+};
+
+// Update or load checkbox states
+function updateData(id, isLoad = false) {
+    if (!isLoad) {
+        const checkbox = document.getElementById(id);
+        if (checkbox) localStorage.setItem("ss_data_" + id, checkbox.checked);
+    } else {
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
+            if (!key.startsWith("ss_data_")) continue;
 
-            // Check if the key starts with "ss_data_"
-            if (key.startsWith("ss_data_")) {
-                const id = key.replace("ss_data_", ""); // Extract ID
-                const value = localStorage.getItem(key) === "true"; // Convert to boolean
-
-                // Check if the element exists before accessing
-                const checkbox = document.getElementById(id);
-                if (checkbox) {
-                    checkbox.checked = value;
-                }
-
-            }
+            const checkboxId = key.replace("ss_data_", "");
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox) checkbox.checked = localStorage.getItem(key) === "true";
         }
     }
 }

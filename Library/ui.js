@@ -85,12 +85,14 @@ const UIM = (function() {
 
     // Add buttons with IDs + index
     const buttons = options.buttons || ["Button1", "Button2"];
+    const cc = options.C_data || "";
     buttons.forEach((text, index) => {
       const btn = document.createElement("div");
       btn.classList.add("button");
       btn.textContent = text;
       btn.id = "btn-" + (index + 1);   // btn-1, btn-2...
-      btn.dataset.index = index + 1;   // numeric ID
+      btn.dataset.index = index + 1;
+      btn.dataset[cc] = "dag_" + (index + 1);
       container.appendChild(btn);
     });
 

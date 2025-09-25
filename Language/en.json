@@ -1,0 +1,23 @@
+{
+  "dag_1": "Mo",
+  "dag_2": "Tu",
+  "dag_3": "We",
+  "dag_4": "Th",
+  "dag_5": "Fr",
+
+  "l_MA": "Math",
+  "l_Språk": "Language",
+  "l_SL": "SL",
+  "l_Lunch": "Lunch",
+  "l_SO": "History",
+  "l_NO": "Science",
+  "l_MU": "Music",
+  "l_IDH": "IDH",
+  "l_SV": "SV",
+  "l_EN": "EN",
+  "l_HKK": "HKK",
+  "l_BL": "BL",
+
+  "s_Update": "Update"
+
+}
