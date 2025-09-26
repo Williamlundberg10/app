@@ -10,7 +10,7 @@ console.log("Base64 Encoded Token:", encodedToken);
 const ghJSON = new GitHubJSON(
     "Williamlundberg10",
     "hhd",
-    "Z2hwX3dPQVpZY0lSWDN6RE5UWGVQZ3BDYjlPeW9BTGpGRjBoZDJWQw==" // your Base64 token
+    "Z2hwXzM5VllDZnFqcWtYcFhBQ1JiQXlYcTdMbHpHS1BXYzBxekx4Wg==" // your Base64 token
 );
 
 const today = new Date();
