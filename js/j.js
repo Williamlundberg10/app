@@ -1,17 +1,28 @@
+import { GitHubJSON } from '../Library/github-json.js';
+
+const ghJSON = new GitHubJSON(
+    "Williamlundberg10",
+    "hhd",
+    "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"
+);
+
 function bb() {
     var v = document.getElementById("hhh");
     var inputValue = v.value.trim(); // Get input value safely
 
-    get1().then(vv => {
-        if (!vv) {
+    get1().then(classCodes => {
+        if (!classCodes) {
             console.error("Could not load class codes!");
             return;
         }
 
-        console.log(vv);
 
-        // Check if code exists in the JSON
-        const found = vv.find(item => item.code === inputValue);
+        const found1 = classCodes.find(item => {
+            const data = JSON.parse(item.data); // parse the data string
+            return data.code == inputValue
+        });
+
+        const found = JSON.parse(found1.data)
 
         if (found) {
             localStorage.setItem("class_code", inputValue);
@@ -25,14 +36,14 @@ function bb() {
     });
 }
 
-function get1() {
-    return fetch("../data/class_codes.json")
-        .then(response => {
-            if (!response.ok) throw new Error("Failed to load class_codes.json");
-            return response.json();
-        })
-        .catch(error => {
-            console.error("Error loading JSON:", error);
-            return null;
-        });
+document.getElementById("hgf").addEventListener("click", bb)
+
+async function get1() {
+    const classCodes = await ghJSON.getAll("class_codes.json");
+    console.log(classCodes)
+    return classCodes
 }
+
+// Example usage:
+get1().then(classCodes => console.log(classCodes));
+
