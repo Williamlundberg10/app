@@ -2,6 +2,14 @@ import TimeDiff from '../Library/time.js';
 import Lang from '../Library/lang.js';
 import { GitHubJSON } from '../Library/github-json.js';
 
+<<<<<<< HEAD
+=======
+const rawToken = "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";
+const encodedToken = GitHubJSON.encodeBase64(rawToken);
+
+console.log("Base64 Encoded Token:", encodedToken);
+
+>>>>>>> 2e3cd6c99cb198962bf329c26a0ba6c6f6413047
 const ghJSON = new GitHubJSON(
     "Williamlundberg10",
     "hhd",
