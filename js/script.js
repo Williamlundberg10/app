@@ -108,7 +108,7 @@ async function kk(day) {
                     <div class="qqaaa">
                         <div class="qq1aaa">
                             <h1>${Lang.get("l_" + breakName) || breakName}</h1>
-                            <div class="qqqqw">${breakDiff.totalMinutes} minuter</div>
+                            <div class="qqqqw">${breakDiff.totalMinutes + " " + Lang.get("a_" + "m")}</div>
                         </div>
                     </div>`;
             }
@@ -116,8 +116,8 @@ async function kk(day) {
 
         if (currentTime < endTime || day !== todayDay) {
             const countdownText = currentTime < startTime && day === todayDay
-                ? `Lektionen börjar om ${timeToStart.totalMinutes} minuter`
-                : `Lektionen slutar om ${timeToEnd.totalMinutes} minuter`;
+                ? `${Lang.get("a_" + "lbo") + " " + timeToStart.totalMinutes + " " + Lang.get("a_" + "m")}`
+                : `${Lang.get("a_" + "lso") + " " + timeToEnd.totalMinutes + " " + Lang.get("a_" + "m")}`;
 
             r1.innerHTML += `
                 <div style="background-color: ${item.color}; color: ${item.color2};" class="aa">

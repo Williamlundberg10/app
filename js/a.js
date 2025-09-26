@@ -47,6 +47,8 @@ async function forceCloseApp() {
     window.location.reload();
 }
 
+document.getElementById("ffc").addEventListener("click", forceCloseApp);
+
 // Navigate to settings page
 function aq() {
     window.location.href = "../html/settings.html";
@@ -58,10 +60,10 @@ function logout() {
     console.log("Logged out and localStorage cleared!");
     window.location.href = "../html/s.html";
 }
+document.getElementById("logout_id").addEventListener("click", logout);
 
 // Change language
 window.lla = async (lang) => {
-    await Lang.load("../data/lang.json");
     Lang.set(lang);
     localStorage.setItem("ll1", lang);
 
@@ -86,3 +88,5 @@ function updateData(id, isLoad = false) {
         }
     }
 }
+
+document.getElementById("ccccc").addEventListener("change", () => updateData("ccccc"));

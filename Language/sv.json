@@ -17,7 +17,20 @@
   "l_EN": "EN",
   "l_HKK": "HKK",
   "l_BL": "BL",
+  "l_Paus": "Paus",
+  "l_Rast": "Rast",
 
-  "s_Update": "Uppdatera"
+  "s_Update": "Uppdatera",
+  "s_Hide_R/P": "Hide Rast/Paus",
+  "s_Logout": "Log out",
+  "s_Privacy_Policy": "Privacy Policy",
+  
+  "a_lbo": "Lektionen börjar om",
+  "a_lso": "Lektionen slutar om",
+  "a_m": "minuter",
+  "": "",
+  "": "",
+  "": "",
+  "": ""
 
 }
