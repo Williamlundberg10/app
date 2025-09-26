@@ -3,7 +3,18 @@ export class GitHubJSON {
     constructor(owner, repo, token) {
         this.owner = owner;
         this.repo = repo;
-        this.token = token;
+        this.token = GitHubJSON.decodeBase64(token);
+    }
+
+    // Static method to decode Base64
+    static decodeBase64(encodedData) {
+        if (typeof window !== "undefined" && window.atob) {
+            // Browser environment
+            return atob(encodedData);
+        } else {
+            // Node.js environment
+            return Buffer.from(encodedData, 'base64').toString('utf-8');
+        }
     }
 
     async getFile(filePath) {

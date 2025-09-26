@@ -3,7 +3,7 @@ import { GitHubJSON } from '../Library/github-json.js';
 const ghJSON = new GitHubJSON(
     "Williamlundberg10",
     "hhd",
-    "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"
+    "Z2hwX3RZYXZxenFIS0dqYzlIWW1RUG14WUtqY3hiRFVRMTRlUmFBMQ=="
 );
 
 function bb() {
