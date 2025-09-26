@@ -16,11 +16,8 @@ const FILES_TO_CACHE = [
   "/js/j.js",
   "/js/script.js",
 
-  // Data (optional, only if you want them offline)
-  "/data/class_codes.json",
   "/data/data.json",
   "/data/test.json",
-  "/v.json",
 
   // Icons
   "/icons/home.svg",
