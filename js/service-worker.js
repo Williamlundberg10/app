@@ -2,32 +2,32 @@ const CACHE_NAME = "pwa-cache-v1.25";
 
 const FILES_TO_CACHE = [
   "../",               // root
-  "/index.html",
-  "/app.html",
-  "/html/home.html",
-  "/html/s.html",
-  "/html/settings.html",
+  "../index.html",
+  "../app.html",
+  "../html/home.html",
+  "../html/s.html",
+  "../html/settings.html",
 
   // CSS
-  "/css/styles.css",
+  "../css/styles.css",
 
   // JS
-  "/js/a.js",
-  "/js/j.js",
-  "/js/script.js",
+  "../js/a.js",
+  "../js/j.js",
+  "../js/script.js",
 
-  "/data/data.json",
-  "/data/test.json",
+  "../data/data.json",
+  "../data/test.json",
 
   // Icons
-  "/icons/home.svg",
-  "/icons/settings.svg",
-  "/icons/s1.png",
-  "/icons/s2.png",
-  "/icons/s3.png",
+  "../icons/home.svg",
+  "../icons/settings.svg",
+  "../icons/s1.png",
+  "../icons/s2.png",
+  "../icons/s3.png",
 
   // Fallback page
-  "/html/offline.html"
+  "../html/offline.html"
 ];
 
 // Install & Cache Files
