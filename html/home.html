@@ -79,24 +79,6 @@
         })
         .catch((err) => console.error("❌ Service Worker Failed:", err));
     }
-    // Encode a string to Base64
-    function encodeBase64(data) {
-        return btoa(data); // btoa = binary to ASCII
-    }
-
-    // Decode a Base64 string back to original
-    function decodeBase64(encodedData) {
-        return atob(encodedData); // atob = ASCII to binary
-    }
-
-    // Example usage
-    const original = "hh";
-    const encoded = encodeBase64(original);
-    const decoded = decodeBase64(encoded);
-
-    console.log("Original:", original);   // Hello, Laura!
-    console.log("Encoded:", encoded);     // SGVsbG8sIExhdXJhIQ==
-    console.log("Decoded:", decoded);     // Hello, Laura!
 
   </script>
 

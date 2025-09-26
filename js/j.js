@@ -3,7 +3,7 @@ import { GitHubJSON } from '../Library/github-json.js';
 const ghJSON = new GitHubJSON(
     "Williamlundberg10",
     "hhd",
-    "Z2hwX3RZYXZxenFIS0dqYzlIWW1RUG14WUtqY3hiRFVRMTRlUmFBMQ=="
+    "Z2hwX3dPQVpZY0lSWDN6RE5UWGVQZ3BDYjlPeW9BTGpGRjBoZDJWQw==" // your Base64 token
 );
 
 function bb() {

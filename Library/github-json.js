@@ -6,17 +6,25 @@ export class GitHubJSON {
         this.token = GitHubJSON.decodeBase64(token);
     }
 
-    // Static method to decode Base64
+    // Encode to Base64
+    static encodeBase64(rawString) {
+        if (typeof window !== "undefined" && window.btoa) {
+            return btoa(rawString);
+        } else {
+            return Buffer.from(rawString, 'utf-8').toString('base64');
+        }
+    }
+
+    // Decode from Base64
     static decodeBase64(encodedData) {
         if (typeof window !== "undefined" && window.atob) {
-            // Browser environment
             return atob(encodedData);
         } else {
-            // Node.js environment
             return Buffer.from(encodedData, 'base64').toString('utf-8');
         }
     }
 
+    // --- your existing methods unchanged ---
     async getFile(filePath) {
         const url = `https://api.github.com/repos/${this.owner}/${this.repo}/contents/${filePath}`;
         const response = await fetch(url, {
@@ -57,7 +65,6 @@ export class GitHubJSON {
         return '_' + Math.random().toString(36).substr(2, 9);
     }
 
-    // Append data to any file
     async append(filePath, dataText) {
         const { sha, content } = await this.getFile(filePath);
         const arrayContent = Array.isArray(content) ? content : [];
@@ -72,7 +79,6 @@ export class GitHubJSON {
         return await this.saveFile(filePath, arrayContent, sha, "Append data");
     }
 
-    // Delete by ID in any file
     async deleteById(filePath, id) {
         const { sha, content } = await this.getFile(filePath);
         const arrayContent = Array.isArray(content) ? content : [];
@@ -82,13 +88,11 @@ export class GitHubJSON {
         return await this.saveFile(filePath, arrayContent, sha, "Delete data by ID");
     }
 
-    // Get all entries from any file
     async getAll(filePath) {
         const { content } = await this.getFile(filePath);
         return Array.isArray(content) ? content : [];
     }
 
-    // Check if an ID exists in any file
     async exists(filePath, id) {
         const { content } = await this.getFile(filePath);
         const arrayContent = Array.isArray(content) ? content : [];
