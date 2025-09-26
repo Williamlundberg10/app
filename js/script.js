@@ -2,7 +2,7 @@ import TimeDiff from '../Library/time.js';
 import Lang from '../Library/lang.js';
 import { GitHubJSON } from '../Library/github-json.js';
 
-const rawToken = "s";
+const rawToken = "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";
 const encodedToken = GitHubJSON.encodeBase64(rawToken);
 
 console.log("Base64 Encoded Token:", encodedToken);
