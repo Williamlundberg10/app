@@ -196,7 +196,7 @@ async function kk(day) {
             r1.innerHTML += `
                 <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="aa">
                     <div style="color: ${item.color2 || "#fff"};" class="heeeq">
-                        <h1>${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</h1>
+                        <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
                         <div class="qqqqw">${item.tid}</div>
                     </div>
                     ${day === todayDay && currentTime >= startTime ? `<div class="qqqqwq">${countdownText}</div>` : ""}
