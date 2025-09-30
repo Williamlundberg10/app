@@ -62,7 +62,16 @@ export class GitHubJSON {
     }
 
     // Delete by ID in any file
-    async deleteById(filePath, id) {
+    async deleteById(filePath, id, dataText) {
+        const { sha, content } = await this.getFile(filePath);
+        const arrayContent = Array.isArray(content) ? content : [];
+        const index = arrayContent.findIndex(item => item.id === id);
+        if (index === -1) throw new Error("ID not found");
+        arrayContent.splice(index, 1);
+        return await this.saveFile(filePath, arrayContent, sha, "Delete data by ID");
+    }
+
+    async UpdateById(filePath, id) {
         const { sha, content } = await this.getFile(filePath);
         const arrayContent = Array.isArray(content) ? content : [];
         const index = arrayContent.findIndex(item => item.id === id);

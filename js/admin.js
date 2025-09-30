@@ -26,6 +26,28 @@ document.getElementById('buu1').addEventListener('click', async () => {
     }
 });
 
+
+document.getElementById('buu2').addEventListener('click', async () => {
+    const dataText = `
+        {
+        "n": "${document.getElementById("text1").value}",
+        "tid": "${document.getElementById("sst").value + "-" + document.getElementById("st").value}",
+        "dag": "${document.getElementById("dag1").value}",
+        "code": "${document.getElementById("number1").value}",
+        "color": "#59d0ffff",
+        "color2": "#FFFFFF"
+        }
+        `;
+
+    try {
+        await ghJSON.saveFile("h", "kk", "");
+    } catch (err) {
+        alert("Failed: " + err.message);
+    }
+});
+
+
+
 // Delete data by ID
 document.getElementById('deleteBtn').addEventListener('click', async () => {
     const file = document.getElementById('fileInput').value.trim();

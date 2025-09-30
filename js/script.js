@@ -199,7 +199,7 @@ async function kk(day) {
                         <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
                         <div class="qqqqw">${item.tid}</div>
                     </div>
-                    ${day === todayDay && currentTime >= startTime ? `<div class="qqqqwq">${countdownText}</div>` : ""}
+                    ${`<div class="qqqqwq">${countdownText}</div>`}
                 </div>`;
         } else {
             r11.innerHTML += `
