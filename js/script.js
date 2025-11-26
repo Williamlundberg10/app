@@ -30,7 +30,7 @@ function disableBugTime() {
 
 window.onload = async () => {
     await Lang.init();
-
+    localStorage.setItem("gttd", "0");
     const savedLang = localStorage.getItem("ll1") || "sv";
     Lang.set(savedLang);
     localStorage.setItem("ll1", savedLang);
