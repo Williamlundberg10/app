@@ -1,6 +1,6 @@
 // UI-m Library
 const UIM = (function() {
-  var offs = 8
+  var offs = 9
   // Inject global CSS (only once)
   if (!document.getElementById("uim-style")) {
     const style = document.createElement("style");

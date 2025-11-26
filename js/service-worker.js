@@ -1,4 +1,4 @@
-const CACHE_NAME = "pwa-cache-v1.29";
+const CACHE_NAME = "pwa-cache-v1.30";
 
 const FILES_TO_CACHE = [
   "../",               // root
