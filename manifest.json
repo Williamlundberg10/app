@@ -4,7 +4,7 @@
   "start_url": "/app/app.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "description": "SchemaApp by William Lundberg.",
   "orientation": "portrait-primary",
   "id": "william.ll.app",
