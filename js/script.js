@@ -102,6 +102,69 @@ function getWeekdayKey(dateStr) {
     return weekdays[date.getDay()];
 }
 
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function BussT(Data) {
+    const r1 = document.getElementById("df");
+    const r11 = document.getElementById("df1");
+
+    if (Data === 1) {
+        localStorage.setItem("gttd", "0");
+        console.log(localStorage.getItem("dd"));
+        kk(parseInt(localStorage.getItem("dd")));
+        return;
+    }
+    localStorage.setItem("gttd", "1");
+    console.log("Start animation");
+
+    r1.className = "rr";
+    r11.className = "r1r";
+
+    await wait(100);
+
+    r1.className = "rr ee";
+    r11.className = "r1r ee";
+
+    console.log("Animation finished");
+    r11.innerHTML = "";
+    r1.innerHTML = "<div class='nn1'></div>";
+
+    var ddpp = [
+        "OCKELBO - MÖRTEBO",
+        "MÖRTEBO - OCKELBO",
+        "OCKELBO - LINGBO",
+        "LINGBO - OCKELBO",
+        "OCKELBO - ÅBYGGEBY- ÅMOT",
+        "ÅMOT - ÅBYGGEBY - OCKELBO",
+        "OCKELBO - JÄDRAÅS",
+        "JÄDRAÅS - OCKELBO",
+        "OCKELBO - MARSTRAND - ULVSTA",
+        "ULVSTA - MARSTRAND - OCKELBO",
+        "OCKELBO - VANSBRON - NORRBO - MO",
+        "MO - NORRBO - VANSBRON - OCKELBO",
+        "OCKELBO - MÖRTEBO - OCKELBO",
+        "OCKELBO - LINGBO - OCKELBO",
+        "OCKELBO - ÅMOT - OCKELBO",
+        "OCKELBO - JÄDRAÅS - OCKELBO",
+        "OCKELBO - ULVSTA - NORRBO - MO - VANSBRON - OCKELBO"
+    ]
+
+    ddpp.forEach(item => {
+        r1.innerHTML += `
+                <div class="aeeqea">
+                    <div style="color: "#fff"" class="heeeq">
+                        <div class="tttttk">${item}</div>
+                    </div>
+                </div>`;
+
+    });
+
+    r11.innerHTML += "<div class='nn'></div>";
+}
+
+
 async function kk(day) {
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
@@ -110,9 +173,12 @@ async function kk(day) {
     r11.className = "r1r";
 
     const key = getDayKey(day);
-    if (!key) return;
-
     localStorage.setItem("dd", day);
+    if (!key) return;
+    if (localStorage.getItem("gttd") != "0"){
+        return
+    };
+
 
     // Reset day highlights
     ["mån", "tis", "ons", "tor", "fre"].forEach(d => {
@@ -222,6 +288,7 @@ async function kk(day) {
 
 
 window.kk = kk;
+window.BussT = BussT;
 
 
 //setBugTime("01:15");

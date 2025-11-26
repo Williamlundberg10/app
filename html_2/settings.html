@@ -13,7 +13,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="SchemaApp">
   <link rel="apple-touch-icon" href="../icons/s3.png">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta name="mobile-web-app-capable" content="yes">
 
 
   <!-- Theme Colors -->
@@ -33,35 +36,24 @@
 
         <div class="rr ee" id="dff">
             <div class='nn1'></div>
-            <div class="aaq12">
-                <div id="faa_sv" onclick="lla('sv')" class="aaq123">
-                    <h3>SV</h3>
-                </div>
-                <div id="faa_en" onclick="lla('en')" class="aaq123">
-                    <h3>EN</h3>
-                </div>
-            </div>
             <div class="aaq">
-                <h3 data-ll="s_Hide_R/P">Hide Rast/Paus</h3>
-                <input type="checkbox" style="display: none;" id="ccccc">
+                <h3>Hide Rast/Paus</h3>
+                <input onchange="update_data('ccccc')" type="checkbox" style="display: none;" id="ccccc">
                 <label class="kqq" for="ccccc">
                     <div class="kqqq"></div>
                 </label>
             </div>
-            <div id="ffc" class="aaq">
-                <h3 data-ll="s_Update">Update</h3>
+            <div onclick="forceCloseApp()" class="aaq">
+                <h3>Update</h3>
             </div>
-            <div id="logout_id" class="aaq">
-                <h3 data-ll="s_Logout">Log out</h3>
+            <div onclick="logout()" class="aaq">
+                <h3>Log out</h3>
             </div>
             <div class="aaq">
-                <h3>B_v1.29</h3>
+                <h3>v1.16</h3>
             </div>
             <a class="aaq" href="https://williamlundberg10.github.io/app/Privacy_Policy.txt" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
-                <h3 data-ll="s_Privacy_Policy">Privacy Policy</h3>
-            </a>
-            <a class="aaq" href="../html/admin.html" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
-                <h3 data-ll="s_Admin">Admin</h3>
+            <h3>Privacy Policy</h3>
             </a>
 
         </div>
@@ -76,7 +68,7 @@
     </div>
 
 
-    <script type="module" src="../js/a.js"></script>
+    <script src="../js/a.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 // UI-m Library
 const UIM = (function() {
-  var offs = 65
+  var offs = 8
   // Inject global CSS (only once)
   if (!document.getElementById("uim-style")) {
     const style = document.createElement("style");
@@ -13,13 +13,13 @@ const UIM = (function() {
             display: flex;
             flex-direction: row;
             gap: 10px;
-            width: 85%;
-            height: 35px;
+            width: 80%;
+            height: 30px;
             border-radius: 200px;
-            border-color: rgba(255, 255, 255, 0.47);
+            border-color: rgba(220, 220, 220, 0.5);
             border-style: solid;
-            border-width: 3px;
-            background-color: #00000093;
+            border-width: 5px;
+            background-color: #ffffffcb;
             padding: 20px;
             align-items: center;
             justify-content: center;
@@ -38,10 +38,10 @@ const UIM = (function() {
             width: calc(20% - 10px);
             height: 75%;
             border-radius: 200px;
-            border-color: rgba(255, 255, 255, 0.47);
+            border-color: rgba(220, 220, 220, 1);
             border-style: solid;
             border-width: 3px;
-            background-color: #ffffff09;
+            background-color: #29292902;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -59,7 +59,7 @@ const UIM = (function() {
         }
 
         .button{
-            color: #ffffffff;
+            color: #000000ff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,19 +76,26 @@ const UIM = (function() {
 
   // Function to create a UI-m container
   function create(options = {}) {
-    const container = document.createElement("UI-m");
 
+    const buttons = options.buttons || ["Button1", "Button2"];
+    const cc = options.C_data || "";
+    const Z = options.Z + "px" || "15px";
+    const Font_S = options.font_S + "px" || "25px";
+    const width_joystick = options.width_joystick + "%" || "20%";
+
+    const container = document.createElement("UI-m");
+    container.style.bottom = Z
     // Create draggable joystick
     const jf = document.createElement("div");
     jf.classList.add("jf");
+    jf.style.width = width_joystick
     container.appendChild(jf);
 
     // Add buttons with IDs + index
-    const buttons = options.buttons || ["Button1", "Button2"];
-    const cc = options.C_data || "";
     buttons.forEach((text, index) => {
       const btn = document.createElement("div");
       btn.classList.add("button");
+      btn.style.fontSize = Font_S
       btn.textContent = text;
       btn.id = "btn-" + (index + 1);   // btn-1, btn-2...
       btn.dataset.index = index + 1;
@@ -107,7 +114,9 @@ const UIM = (function() {
     function addq(target) {
       const rect = target.getBoundingClientRect();
       const parentRect = container.getBoundingClientRect();
-      const targetCenterX = rect.left - parentRect.left + rect.width - offs / 2;
+      const d = rect.width + offs
+      const targetCenterX = rect.left - parentRect.left + rect.width - d / 2;
+      console.log("Op", rect.width)
       jf.style.left = targetCenterX - jf.offsetWidth / 2 + "px";
     }
 
@@ -125,7 +134,9 @@ const UIM = (function() {
 
       buttons.forEach(btn => {
         const r = btn.getBoundingClientRect();
-        const cx = r.left - parentRect.left + r.width - offs / 2;
+        const d = r.width + offs
+        const cx = r.left - parentRect.left + r.width - d / 2;
+        console.log("oooo", d)
         const cy = r.top - parentRect.top + r.height / 2;
         const dist = Math.hypot(cx - jfCenterX, cy - jfCenterY);
         if (dist < minDist) {

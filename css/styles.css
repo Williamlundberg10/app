@@ -114,7 +114,7 @@
 .nn{
     display: flex;
     width: 330px;
-    height: 80px;
+    height: 160px;
     padding: 10px;
     margin: 10px;
 }
@@ -141,10 +141,16 @@ body{
     align-items: center;
     margin-top: 10px;
     gap: 10px;
+}
 
-    &.ee {
-        animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-    }
+/* Animation framåt */
+.rr.ee {
+    animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Animation bakåt */
+.rr.eer {
+    animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) reverse forwards;
 }
 
 .r1r {
@@ -153,13 +159,19 @@ body{
     align-items: center;
     margin-top: 10px;
     gap: 10px;
-
-    &.ee {
-        animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-    }
 }
 
-/* OPEN ANIMATION */
+/* Animation framåt */
+.r1r.ee {
+    animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Animation bakåt */
+.r1r.eer {
+    animation: dropDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) reverse forwards;
+}
+
+/* Öppnings-animation */
 @keyframes dropDown {
   0% {
     opacity: 0;
@@ -177,6 +189,7 @@ body{
     transform: translateY(0);
   }
 }
+
 
 .asqc{
     position: fixed;
@@ -699,4 +712,32 @@ body{
 @keyframes pop {
   from { transform: translateY(100%); }
   to { transform: translateY(50%); }
+}
+
+.tttttk{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.aeeqea{
+    display: flex;
+    flex-direction: column;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 330px;
+    height: 50px;
+    border-radius: 20px;
+    border-color: rgba(220, 220, 220, 0.5);
+    border-style: solid;
+    border-width: 3px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+    margin: 0px;
+    align-items: start;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

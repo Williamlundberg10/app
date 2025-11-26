@@ -3,7 +3,7 @@
   "short_name": "Schema",
   "start_url": "/app/app.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "theme_color": "#000000",
   "description": "SchemaApp by William Lundberg.",
   "orientation": "portrait-primary",

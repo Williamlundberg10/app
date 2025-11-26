@@ -1,0 +1,23 @@
+{
+  "dag_1": { "en": "Mo","sv": "Må" },
+  "dag_2": { "en": "Tu","sv": "Ti" },
+  "dag_3": { "en": "We","sv": "On" },
+  "dag_4": { "en": "Th","sv": "To" },
+  "dag_5": { "en": "Fr","sv": "Fr" },
+
+  "l_MA":    { "en": "Math","sv": "MA" },
+  "l_Språk": { "en": "Language","sv": "Språk" },
+  "l_SL":    { "en": "SL","sv": "SL" },
+  "l_Lunch": { "en": "Lunch","sv": "Lunch" },
+  "l_SO":    { "en": "History","sv": "SO" },
+  "l_NO":    { "en": "Science","sv": "NO" },
+  "l_MU":    { "en": "Music","sv": "MU" },
+  "l_IDH":   { "en": "IDH","sv": "IDH" },
+  "l_SV":   { "en": "SV","sv": "SV" },
+  "l_EN":   { "en": "EN","sv": "EN" },
+  "l_HKK":   { "en": "HKK","sv": "HKK" },
+  "l_BL":   { "en": "BL","sv": "BL" },
+
+  "s_Update":   { "en": "Update","sv": "Uppdatera" }
+
+}

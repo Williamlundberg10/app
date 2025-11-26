@@ -14,6 +14,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="SchemaApp">
   <link rel="apple-touch-icon" href="../icons/s3.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="mobile-web-app-capable" content="yes">
 
 
@@ -24,16 +27,13 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  
+
     <div class="mm">
         <div class="asqc">
           <button id="aa_1" class="an"></button>
-          <button onclick="ui.popUp('../html/popup_test.html')">Open Popup</button>
-          <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="a"><img class="nxx" src="../icons/settings.svg" alt=""></button>
+            <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="a"><img class="nxx" src="../icons/settings.svg" alt=""></button>
 
         </div>
-
-        <div class="r1r ee" id="hejje"></div>
 
         <div class="rr ee" id="df">
         </div>
@@ -55,7 +55,6 @@
 
     <script type="module" src="../js/script.js"></script>
     <script src="../Library/ui.js"></script>
-    <script src="../Library/popup.js"></script>
 
   <script>
     const wrapper = document.createElement("div");
@@ -63,24 +62,11 @@
 
     // Example usage
     UIM.create({
-      C_data: "ll",
       buttons: ["Må", "Ti", "On", "To", "Fr"],
       parent: wrapper,
       default: new Date().getDay(), // 👈 starts on "Ti"
       onRelease: (btn, id) => kk(id),
       onClick:  (btn, id) => kk(id)
-    });
-
-    UIM.create({
-      width_joystick: 50,
-      font_S: 19,
-      Z: 110,
-      C_data: "l",
-      buttons: ["Schema", "Busstider"],
-      parent: wrapper,
-      default: 1,
-      onRelease: (btn, id) => BussT(id),
-      onClick:  (btn, id) => BussT(id)
     });
 
 
@@ -90,10 +76,11 @@
         .then((registration) => {
           console.log("✅ Service Worker Registered");
 
+          // Force update the service worker
+          registration.update();
         })
         .catch((err) => console.error("❌ Service Worker Failed:", err));
     }
-
   </script>
 
 </body>
