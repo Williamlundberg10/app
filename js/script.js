@@ -131,8 +131,56 @@ async function BussT(Data) {
     r11.innerHTML = "";
     r1.innerHTML = "<div class='nn1'></div>";
 
-    var ddpp = [
-        "OCKELBO - MÖRTEBO",
+    var ddp9p = [
+        {
+            "line": "70A",
+            "route": "Ockelbo - Mörtebo",
+            "stops": [
+                "Gåvvägens",
+                "Perslunda",
+                "Torget",
+                "Ockelbo station",
+                "Säbyggeby",
+                "Mörtebo Jonso"
+            ],
+            "schedule": {
+                "helgfri_dag": [
+                {
+                    "days": ["måndag", "tisdag", "onsdag", "torsdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": null,
+                    "Perslunda": null,
+                    "Torget": null,
+                    "Ockelbo station": "07:05",
+                    "Säbyggeby": "07:10",
+                    "Mörtebo Jonso": "07:25"
+                    }
+                },
+                {
+                    "days": ["tisdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": "13:40",
+                    "Perslunda": null,
+                    "Torget": "13:42",
+                    "Ockelbo station": "13:45",
+                    "Säbyggeby": "13:50",
+                    "Mörtebo Jonso": "14:05"
+                    }
+                },
+                {
+                    "days": ["måndag", "tisdag", "torsdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": null,
+                    "Perslunda": "15:40",
+                    "Torget": "15:42",
+                    "Ockelbo station": "15:45",
+                    "Säbyggeby": "15:50",
+                    "Mörtebo Jonso": "16:05"
+                    }
+                }
+                ]
+            }
+        },
         "MÖRTEBO - OCKELBO",
         "OCKELBO - LINGBO",
         "LINGBO - OCKELBO",
@@ -150,12 +198,66 @@ async function BussT(Data) {
         "OCKELBO - JÄDRAÅS - OCKELBO",
         "OCKELBO - ULVSTA - NORRBO - MO - VANSBRON - OCKELBO"
     ]
+    var ddpp = [
+        {
+            "line": "70A",
+            "route": "Ockelbo - Mörtebo",
+            "stops": [
+                "Gåvvägens",
+                "Perslunda",
+                "Torget",
+                "Ockelbo station",
+                "Säbyggeby",
+                "Mörtebo Jonso"
+            ],
+            "schedule": {
+                "helgfri_dag": [
+                {
+                    "days": ["måndag", "tisdag", "onsdag", "torsdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": null,
+                    "Perslunda": null,
+                    "Torget": null,
+                    "Ockelbo station": "07:05",
+                    "Säbyggeby": "07:10",
+                    "Mörtebo Jonso": "07:25"
+                    }
+                },
+                {
+                    "days": ["tisdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": "13:40",
+                    "Perslunda": null,
+                    "Torget": "13:42",
+                    "Ockelbo station": "13:45",
+                    "Säbyggeby": "13:50",
+                    "Mörtebo Jonso": "14:05"
+                    }
+                },
+                {
+                    "days": ["måndag", "tisdag", "torsdag", "fredag"],
+                    "times": {
+                    "Gåvvägens": null,
+                    "Perslunda": "15:40",
+                    "Torget": "15:42",
+                    "Ockelbo station": "15:45",
+                    "Säbyggeby": "15:50",
+                    "Mörtebo Jonso": "16:05"
+                    }
+                }
+                ]
+            }
+        }
+    ]
 
     ddpp.forEach(item => {
+        console.log(item)
+        var ddd = JSON.stringify(item)
         r1.innerHTML += `
-                <div class="aeeqea">
+                <div onclick='ui.popUp("../html/popup_test.html", ${ddd} )' data-item='{"id":1,"name":"test"}' class="aeeqea">
+
                     <div style="color: "#fff"" class="heeeq">
-                        <div class="tttttk">${item}</div>
+                        <div class="tttttk">${item.route}</div>
                     </div>
                 </div>`;
 

@@ -675,44 +675,7 @@ body{
     }
   }
 
-.popup-overlay {
-  transition-duration: 0.3s;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
 
-.popup-box {
-  background: white;
-  border-radius: 52px;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px -18px 100px 0px rgba(0, 0, 0, 0.479);
-  position: fixed;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-/* Slide in */
-.popup-box.q1 {
-  animation: pop 0.2s ease;
-  transform: translateY(50%);
-}
-
-/* Slide out */
-.popup-box.closing {
-  transform: translateY(100%);
-}
-
-
-@keyframes pop {
-  from { transform: translateY(100%); }
-  to { transform: translateY(50%); }
-}
 
 .tttttk{
   font-family: "Archivo Black", sans-serif;
