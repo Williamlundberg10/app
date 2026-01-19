@@ -7,9 +7,9 @@
       "color2": "#FFFFFF"
     },
     {
-      "n": "EN",
+      "n": "MA",
       "tid": "09:30-10:30",
-      "color": "#4C275D",
+      "color": "#3D921F",
       "color2": "#FFFFFF"
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "n": "Språk",
-      "tid": "13:25-14:20",
+      "tid": "13:25-14:30",
       "color": "#136266",
       "color2": "#FFFFFF"
     }
@@ -92,12 +92,6 @@
       "tid": "13:50-14:30",
       "color": "#B43A2F",
       "color2": "#FFFFFF"
-    },
-    {
-      "n": "Språk",
-      "tid": "14:45-15:35",
-      "color": "#136266",
-      "color2": "#FFFFFF"
     }
   ],
 
@@ -139,9 +133,9 @@
       "color2": "#FFFFFF"
     },
     {
-      "n": "Språk",
+      "n": "SV",
       "tid": "14:10-14:30",
-      "color": "#136266",
+      "color": "#7B2820",
       "color2": "#FFFFFF"
     }
   ],
@@ -182,6 +176,12 @@
       "tid": "12:05-13:05",
       "color": "#7C9E39",
       "color2": "#FFFFFF"
+    },
+    {
+      "n": "Språk",
+      "tid": "13:10-13:40",
+      "color": "#136266",
+      "color2": "#FFFFFF"
     }
   ],
 
@@ -193,9 +193,9 @@
       "color2": "#FFFFFF"
     },
     {
-      "n": "MA",
-      "tid": "10:10-11:10",
-      "color": "#3D921F",
+      "n": "EN",
+      "tid": "10:00-11:00",
+      "color": "#4C275D",
       "color2": "#FFFFFF"
     },
     {
