@@ -87,13 +87,13 @@
     font-weight: 400;
     font-style: normal;
     width: 330px;
-    height: 10px;
+    height: 20px;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 4px;
     border-color: rgba(220, 220, 220, 0.5);
     border-style: solid;
     border-width: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(116, 116, 116);
     color: #000000;
     padding: 10px;
     margin: 0px;

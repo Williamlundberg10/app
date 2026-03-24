@@ -370,9 +370,13 @@ async function kk(day) {
                     ${`<div class="qqqqwq">${countdownText}</div>`}
                 </div>`;
         } else {
-            r11.innerHTML += `
-                <div style="background-color: #b9b9b9; color: #fff;" class="aaa">
-                    <h1>${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</h1>
+            r1.innerHTML += `
+                <div style="background-color: "#0080ff", color: "#fff"" class="aaa">
+                    <div style="color: ${item.color2 || "#fff"};" class="heeeq">
+                        <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
+                        <div class="qqqqw">${item.tid}</div>
+                    </div>
+                    ${`<div class="qqqqwq"></div>`}
                 </div>`;
         }
 
