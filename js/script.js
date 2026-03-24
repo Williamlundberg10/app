@@ -298,7 +298,7 @@ async function kk(day) {
 
     const currentTime = bugMode && bugTime ? bugTime : today.toTimeString().slice(0, 5);
     r1.innerHTML = "<div class='nn1'></div>";
-    r11.innerHTML = "";
+    r11.innerHTML = '<div class="apap">Nu <img class="apap-img" src="https://img.icons8.com/?size=100&id=99271&format=png&color=ffffff" alt=""></div>';
 
     // Load custom events
     const data = await ghJSON.getAll("data.json");
@@ -342,7 +342,7 @@ async function kk(day) {
                 localStorage.getItem("ss_data_ccccc") !== "true"
             ) {
                 const breakName = breakDiff.totalMinutes < 10 ? "Paus" : "Rast";
-                r1.innerHTML += `
+                r11.innerHTML += `
                     <div class="qqaaa">
                         <div class="qq1aaa">
                             <h1>${Lang.get("l_" + breakName) || breakName}</h1>
@@ -361,7 +361,7 @@ async function kk(day) {
                 ? `${Lang.get("a_lbo") + " " + timeToStart.totalMinutes + " " + Lang.get("a_m")}`
                 : `${Lang.get("a_lso") + " " + timeToEnd.totalMinutes + " " + Lang.get("a_m")}`;
 
-            r1.innerHTML += `
+            r11.innerHTML += `
                 <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="aa">
                     <div style="color: ${item.color2 || "#fff"};" class="heeeq">
                         <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
@@ -371,12 +371,11 @@ async function kk(day) {
                 </div>`;
         } else {
             r1.innerHTML += `
-                <div style="background-color: "#0080ff", color: "#fff"" class="aaa">
+                <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="aa">
                     <div style="color: ${item.color2 || "#fff"};" class="heeeq">
                         <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
                         <div class="qqqqw">${item.tid}</div>
                     </div>
-                    ${`<div class="qqqqwq"></div>`}
                 </div>`;
         }
 
