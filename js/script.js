@@ -11,18 +11,18 @@ const ghJSON = new GitHubJSON(
 const today = new Date();
 const todayDay = today.getDay();
 
-let bugMode = false;
-let bugTime = null;
+var bugMode = false;
+var bugTime = null;
 
 // Aktivera bug mode och sätt en testtid (format "HH:MM")
-function setBugTime(time) {
+globalThis.setBugTime = function(time) {
     bugMode = true;
     bugTime = time;
     console.log("Bug mode ON → currentTime = " + bugTime);
 }
 
 // Stäng av bug mode
-function disableBugTime() {
+globalThis.disableBugTime = function() {
     bugMode = false;
     bugTime = null;
     console.log("Bug mode OFF → using real time");
@@ -49,14 +49,31 @@ function logout() {
 }
 
 async function fetchJson(url) {
-    try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Failed to load ${url}`);
-        return await res.json();
-    } catch (err) {
-        console.error(err);
-        return null;
+    const CACHE_NAME = "api-cache-v1";
+    const cache = await caches.open(CACHE_NAME);
+
+    const cached = await cache.match(url);
+
+    const networkFetch = fetch(url)
+        .then(res => {
+            if (res.ok) {
+                cache.put(url, res.clone());
+            }
+            return res;
+        })
+        .catch(() => null);
+
+    // Return cached immediately if exists
+    if (cached) {
+        networkFetch; // update in background
+        return await cached.json();
     }
+
+    // Otherwise wait for network
+    const res = await networkFetch;
+    if (!res) return null;
+
+    return await res.json();
 }
 
 async function getDayData(dayKey) {

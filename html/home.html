@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-title" content="SchemaApp">
   <link rel="apple-touch-icon" href="../icons/s3.png">
   <meta name="mobile-web-app-capable" content="yes">
-
+  <meta http-equiv="Cache-Control" content="max-age=300">
 
   <!-- Theme Colors -->
   <meta name="theme-color" content="#FFFFFF">
@@ -88,15 +88,13 @@
 
 
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("../js/service-worker.js")
-        .then((registration) => {
-          console.log("✅ Service Worker Registered");
+      navigator.serviceWorker.register("../service-worker.js");
 
-        })
-        .catch((err) => console.error("❌ Service Worker Failed:", err));
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        console.log("New version applied");
+        location.reload();
+      });
     }
-
   </script>
 
 </body>
