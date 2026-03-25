@@ -1,4 +1,4 @@
-const VERSION = "v4.1";
+const VERSION = "v4.2";
 
 const STATIC_CACHE = `static-${VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${VERSION}`;
@@ -8,11 +8,11 @@ const MAX_ITEMS = 50;
 
 const CORE_ASSETS = [
   "/",
-  "/index.html",
-  "/html/offline.html",
-  "/html/home.html",
-  "/css/styles.css",
-  "/js/script.js"
+  "//index.html",
+  "//html/offline.html",
+  "//html/home.html",
+  "//css/styles.css",
+  "//js/script.js"
 ];
 
 
