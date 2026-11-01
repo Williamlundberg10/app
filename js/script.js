@@ -218,7 +218,7 @@ async function BussT(Data) {
     var ddpp = [
         {
             "line": "70A",
-            "route": "Ockelbo - Mörtebo",
+            "route": "coming soon",
             "stops": [
                 "Gåvvägens",
                 "Perslunda",
@@ -271,7 +271,7 @@ async function BussT(Data) {
         console.log(item)
         var ddd = JSON.stringify(item)
         r1.innerHTML += `
-                <div onclick='ui.popUp("../html/popup_test.html", ${ddd} )' data-item='{"id":1,"name":"test"}' class="aeeqea">
+                <div Off_onclick='ui.popUp("../html/popup_test.html", ${ddd} )' data-item='{"id":1,"name":"test"}' class="aeeqea">
 
                     <div style="color: "#fff"" class="heeeq">
                         <div class="tttttk">${item.route}</div>
@@ -413,4 +413,4 @@ window.kk = kk;
 window.BussT = BussT;
 
 
-//setBugTime("01:15");
+ // setBugTime("21:15");
