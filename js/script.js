@@ -35,7 +35,7 @@ window.onload = async () => {
     Lang.set(savedLang);
     localStorage.setItem("ll1", savedLang);
 
-    document.getElementById("dee").className = "asq";
+    document.getElementById("dee").className = "weekday-navigation";
 
     if (!localStorage.getItem("class_code")) logout();
 
@@ -136,17 +136,17 @@ async function BussT(Data) {
     localStorage.setItem("gttd", "1");
     console.log("Start animation");
 
-    r1.className = "rr";
-    r11.className = "r1r";
+    r1.className = "schedule-column";
+    r11.className = "event-column";
 
     await wait(100);
 
-    r1.className = "rr ee";
-    r11.className = "r1r ee";
+    r1.className = "schedule-column is-entering";
+    r11.className = "event-column is-entering";
 
     console.log("Animation finished");
     r11.innerHTML = "";
-    r1.innerHTML = "<div class='nn1'></div>";
+    r1.innerHTML = "<div class='schedule-top-spacer'></div>";
 
     var ddp9p = [
         {
@@ -271,16 +271,16 @@ async function BussT(Data) {
         console.log(item)
         var ddd = JSON.stringify(item)
         r1.innerHTML += `
-                <div Off_onclick='ui.popUp("../html/popup_test.html", ${ddd} )' data-item='{"id":1,"name":"test"}' class="aeeqea">
+                <div Off_onclick='ui.popUp("../html/popup_test.html", ${ddd} )' data-item='{"id":1,"name":"test"}' class="route-card">
 
-                    <div style="color: "#fff"" class="heeeq">
-                        <div class="tttttk">${item.route}</div>
+                    <div style="color: "#fff"" class="schedule-card-header">
+                        <div class="route-card-title">${item.route}</div>
                     </div>
                 </div>`;
 
     });
 
-    r11.innerHTML += "<div class='nn'></div>";
+    r11.innerHTML += "<div class='schedule-bottom-spacer'></div>";
 }
 
 
@@ -288,8 +288,8 @@ async function kk(day) {
     const r1 = document.getElementById("df");
     const r11 = document.getElementById("df1");
 
-    r1.className = "rr";
-    r11.className = "r1r";
+    r1.className = "schedule-column";
+    r11.className = "event-column";
 
     const key = getDayKey(day);
     localStorage.setItem("dd", day);
@@ -301,10 +301,10 @@ async function kk(day) {
 
     // Reset day highlights
     ["mån", "tis", "ons", "tor", "fre"].forEach(d => {
-        document.getElementById("qq_" + d).className = " c q";
+        document.getElementById("qq_" + d).className = " weekday-button is-unselected";
     });
     const currentDayEl = document.getElementById("qq_" + key);
-    currentDayEl.className = " c";
+    currentDayEl.className = " weekday-button";
     if (day === todayDay) currentDayEl.style.backgroundColor = "#e0e0e0ff";
 
     const dayData = await getDayData(key);
@@ -314,8 +314,8 @@ async function kk(day) {
     }
 
     const currentTime = bugMode && bugTime ? bugTime : today.toTimeString().slice(0, 5);
-    r1.innerHTML = "<div class='nn1'></div>";
-    r11.innerHTML = '<div class="apap">Nu <img class="apap-img" src="https://img.icons8.com/?size=100&id=99271&format=png&color=ffffff" alt=""></div>';
+    r1.innerHTML = "<div class='schedule-top-spacer'></div>";
+    r11.innerHTML = '<div class="current-time-card">Nu <img class="current-time-icon" src="https://img.icons8.com/?size=100&id=99271&format=png&color=ffffff" alt=""></div>';
 
     // Load custom events
     const data = await ghJSON.getAll("data.json");
@@ -360,10 +360,10 @@ async function kk(day) {
             ) {
                 const breakName = breakDiff.totalMinutes < 10 ? "Paus" : "Rast";
                 r11.innerHTML += `
-                    <div class="qqaaa">
-                        <div class="qq1aaa">
+                    <div class="break-card">
+                        <div class="break-card-header">
                             <h1>${Lang.get("l_" + breakName) || breakName}</h1>
-                            <div class="qqqqw">${breakDiff.totalMinutes + " " + Lang.get("a_m")}</div>
+                            <div class="schedule-card-detail">${breakDiff.totalMinutes + " " + Lang.get("a_m")}</div>
                         </div>
                     </div>`;
             }
@@ -379,19 +379,19 @@ async function kk(day) {
                 : `${Lang.get("a_lso") + " " + timeToEnd.totalMinutes + " " + Lang.get("a_m")}`;
 
             r11.innerHTML += `
-                <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="aa">
-                    <div style="color: ${item.color2 || "#fff"};" class="heeeq">
-                        <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
-                        <div class="qqqqw">${item.tid}</div>
+                <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="schedule-card">
+                    <div style="color: ${item.color2 || "#fff"};" class="schedule-card-header">
+                        <div class="schedule-card-title">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
+                        <div class="schedule-card-detail">${item.tid}</div>
                     </div>
-                    ${`<div class="qqqqwq">${countdownText}</div>`}
+                    ${`<div class="schedule-card-countdown">${countdownText}</div>`}
                 </div>`;
         } else {
             r1.innerHTML += `
-                <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="aa">
-                    <div style="color: ${item.color2 || "#fff"};" class="heeeq">
-                        <div class="qqqqwvv">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
-                        <div class="qqqqw">${item.tid}</div>
+                <div style="background-color: ${item.color || "#0080ff"}; color: ${item.color2 || "#fff"};" class="schedule-card">
+                    <div style="color: ${item.color2 || "#fff"};" class="schedule-card-header">
+                        <div class="schedule-card-title">${item.type === "event" ? item.n : (Lang.get("l_" + item.n) || item.n)}</div>
+                        <div class="schedule-card-detail">${item.tid}</div>
                     </div>
                 </div>`;
         }
@@ -400,10 +400,10 @@ async function kk(day) {
         lastEndTime = endTime;
     });
 
-    r11.innerHTML += "<div class='nn'></div>";
+    r11.innerHTML += "<div class='schedule-bottom-spacer'></div>";
 
-    r1.className = "rr ee";
-    r11.className = "r1r ee";
+    r1.className = "schedule-column is-entering";
+    r11.className = "event-column is-entering";
 
     console.log(localStorage.getItem("data_name"));
 }

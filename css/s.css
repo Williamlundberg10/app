@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Kavoon';
+    src: url('../fonts/Kavoon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saira Stencil One';
+    src: url('../fonts/SairaStencilOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Black';
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.kavoon-regular {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.class-code-input{
+    display: flex;
+    flex-direction: row;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 330px;
+    height: 30px;
+    border-radius: 20px;
+    border-color: rgba(220, 220, 220, 0.5);
+    border-style: solid;
+    border-width: 3px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-button{
+    display: flex;
+    flex-direction: row;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 330px;
+    height: 50px;
+    border-radius: 20px;
+    border-color: rgba(220, 220, 220, 0.5);
+    border-style: solid;
+    border-width: 3px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.centered-page-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.page-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.brand-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.brand-title{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+
+.animated-brand-icon{
+  transition-duration: 0.4s;
+  border-radius: 50px;
+  animation: rr111 3.5s infinite;
+}
+
+@keyframes rr111 {
+  0% {
+    background-color: #00c3ff;
+  }
+  20% {
+    background-color: #ff00f2;
+  }
+  40% {
+    background-color: #ff0022;
+  }
+  60% {
+    background-color: #ff00bf;
+  }
+  80% {
+    background-color: #003cff;
+  }
+  100% {
+    background-color: #00c3ff;
+  }
+}

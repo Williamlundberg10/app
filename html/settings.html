@@ -20,58 +20,60 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../css/styles.css">
+
+
+<link rel="stylesheet" href="../css/settings.css">
 </head>
 <body>
 
-    <div class="mm">
-        <div class="asqc">
-            <button id="aa_1" class="an">7-9D</button>
-            <button onclick="window.location.href = 'home.html'" id="aa_2" class="a"><img class="nxx" src="../icons/home.svg" alt=""></button>
+    <div class="schedule-page-container">
+        <div class="top-navigation-bar">
+            <button id="aa_1" class="class-name-button">7-9D</button>
+            <button onclick="window.location.href = 'home.html'" id="aa_2" class="icon-navigation-button"><img class="navigation-icon" src="../icons/home.svg" alt=""></button>
 
         </div>
 
-        <div class="rr ee" id="dff">
-            <div class='nn1'></div>
-            <div class="aaq12">
-                <div id="faa_sv" onclick="lla('sv')" class="aaq123">
+        <div class="schedule-column is-entering" id="dff">
+            <div class='schedule-top-spacer'></div>
+            <div class="language-selector">
+                <div id="faa_sv" onclick="lla('sv')" class="language-option">
                     <h3>SV</h3>
                 </div>
-                <div id="faa_en" onclick="lla('en')" class="aaq123">
+                <div id="faa_en" onclick="lla('en')" class="language-option">
                     <h3>EN</h3>
                 </div>
             </div>
-            <div class="aaq">
+            <div class="settings-row">
                 <h3 data-ll="s_Hide_R/P">Hide Rast/Paus</h3>
-                <input type="checkbox" style="display: none;" id="ccccc">
-                <label class="kqq" for="ccccc">
-                    <div class="kqqq"></div>
+                <input type="checkbox" style="display: none;" id="hide-breaks-toggle">
+                <label class="toggle-switch" for="hide-breaks-toggle">
+                    <div class="toggle-switch-knob"></div>
                 </label>
             </div>
-            <div id="ffc" class="aaq">
+            <div id="ffc" class="settings-row">
                 <h3 data-ll="s_Update">Update</h3>
             </div>
-            <div id="logout_id" class="aaq">
+            <div id="logout_id" class="settings-row">
                 <h3 data-ll="s_Logout">Log out</h3>
             </div>
-            <div class="aaq">
+            <div class="settings-row">
                 <h3>B_v2.00</h3>
             </div>
-            <a class="aaq" href="https://williamlundberg10.github.io/app/Privacy_Policy.txt" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
+            <a class="settings-row" href="https://williamlundberg10.github.io/app/Privacy_Policy.txt" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
                 <h3 data-ll="s_Privacy_Policy">Privacy Policy</h3>
             </a>
-            <a class="aaq" href="../html/admin.html" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
+            <a class="settings-row" href="../html/admin.html" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy Policy">
                 <h3 data-ll="s_Admin">Admin</h3>
             </a>
 
         </div>
 
-        <div id="dee" class="asq">
-            <button id="qq_1" class="c q">M</button>
-            <button id="qq_2" class="c q">T</button>
-            <button id="qq_3" class="c q">O</button>
-            <button id="qq_4" class="c q">T</button>
-            <button id="qq_5" class="c q">F</button>
+        <div id="dee" class="weekday-navigation">
+            <button id="qq_1" class="weekday-button is-unselected">M</button>
+            <button id="qq_2" class="weekday-button is-unselected">T</button>
+            <button id="qq_3" class="weekday-button is-unselected">O</button>
+            <button id="qq_4" class="weekday-button is-unselected">T</button>
+            <button id="qq_5" class="weekday-button is-unselected">F</button>
       </div>
     </div>
 

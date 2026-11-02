@@ -3,7 +3,7 @@
 app
 ├─ app.html
 ├─ css
-│  └─ styles.css
+│  └─ page-specific stylesheets (index.css, home.css, settings.css, s.css, popup_test.css, admin.css, offline.css, app.css)
 ├─ data
 │  ├─ class_codes.json
 │  ├─ data.json

@@ -21,36 +21,38 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../css/styles.css">
+
+
+<link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-  
-    <div class="mm">
-        <div class="asqc">
-          <button id="aa_1" class="an"></button>
+
+    <div class="schedule-page-container">
+        <div class="top-navigation-bar">
+          <button id="aa_1" class="class-name-button"></button>
           <button onclick="ui.popUp('../html/popup_test.html', ['hej'])">Open Popup</button>
-          <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="a"><img class="nxx" src="../icons/settings.svg" alt=""></button>
+          <button onclick="window.location.href = 'settings.html'" id="aa_qq" class="icon-navigation-button"><img class="navigation-icon" src="../icons/settings.svg" alt=""></button>
 
         </div>
 
-        <div class="r1r ee" id="hejje">
+        <div class="event-column is-entering" id="hejje">
         </div>
 
-        <div class="rr ee" id="df">
+        <div class="schedule-column is-entering" id="df">
           <img src="https://img.icons8.com/?size=100&id=99271&format=png&color=000000" alt="">
         </div>
-        <div class="r1r ee" id="df1"></div>
+        <div class="event-column is-entering" id="df1"></div>
 
-        <div onclick="pqrr()" id="ggrr" class="aaq1">
+        <div onclick="pqrr()" id="ggrr" class="update-button">
             <h3>Update</h3>
         </div>
-        
-        <div style="display: none;" id="dee" class="asq qq">
-            <button onclick="kk(1)" id="qq_mån" class="c q">Må</button>
-            <button onclick="kk(2)" id="qq_tis" class="c q">Ti</button>
-            <button onclick="kk(3)" id="qq_ons" class="c">On</button>
-            <button onclick="kk(4)" id="qq_tor" class="c q">To</button>
-            <button onclick="kk(5)" id="qq_fre" class="c q">Fr</button>
+
+        <div style="display: none;" id="dee" class="weekday-navigation is-hidden">
+            <button onclick="kk(1)" id="qq_mån" class="weekday-button is-unselected">Må</button>
+            <button onclick="kk(2)" id="qq_tis" class="weekday-button is-unselected">Ti</button>
+            <button onclick="kk(3)" id="qq_ons" class="weekday-button">On</button>
+            <button onclick="kk(4)" id="qq_tor" class="weekday-button is-unselected">To</button>
+            <button onclick="kk(5)" id="qq_fre" class="weekday-button is-unselected">Fr</button>
         </div>
     </div>
 

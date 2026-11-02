@@ -8,15 +8,15 @@ window.onload = async () => {
     localStorage.setItem("ll1", savedLang);
 
     // Highlight selected language button
-    document.querySelectorAll('.aaq123').forEach(el => el.className = 'aaq123');
+    document.querySelectorAll('.language-option').forEach(el => el.className = 'language-option');
     const langButton = document.getElementById("faa_" + savedLang);
-    if (langButton) langButton.className = "aaq123 rr";
+    if (langButton) langButton.className = "language-option selected-language";
 
     // Set class name display
     const dataNameEl = document.getElementById("aa_1");
     if (dataNameEl) dataNameEl.textContent = localStorage.getItem("data_name");
 
-    document.getElementById("dee").className = "asq qq";
+    document.getElementById("dee").className = "weekday-navigation is-hidden";
 
     updateData("", true);
 };
@@ -67,9 +67,9 @@ window.lla = async (lang) => {
     Lang.set(lang);
     localStorage.setItem("ll1", lang);
 
-    document.querySelectorAll('.aaq123').forEach(el => el.className = 'aaq123');
+    document.querySelectorAll('.language-option').forEach(el => el.className = 'language-option');
     const selectedButton = document.getElementById("faa_" + lang);
-    if (selectedButton) selectedButton.className = "aaq123 rr";
+    if (selectedButton) selectedButton.className = "language-option selected-language";
 };
 
 // Update or load checkbox states
@@ -89,4 +89,4 @@ function updateData(id, isLoad = false) {
     }
 }
 
-document.getElementById("ccccc").addEventListener("change", () => updateData("ccccc"));
+document.getElementById("hide-breaks-toggle").addEventListener("change", () => updateData("hide-breaks-toggle"));

@@ -11,7 +11,14 @@ const CORE_ASSETS = [
   "./index.html",
   "./html/offline.html",
   "./html/home.html",
-  "./css/styles.css",
+  "./css/index.css",
+  "./css/home.css",
+  "./css/settings.css",
+  "./css/s.css",
+  "./css/popup_test.css",
+  "./css/admin.css",
+  "./css/offline.css",
+  "./css/app.css",
   "./js/script.js"
 ];
 
