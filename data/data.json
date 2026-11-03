@@ -1,72 +1,60 @@
 {
   "mån": [
     {
-      "n": "SV",
-      "tid": "08:15-09:15",
-      "color": "#7B2820",
+      "n": "Språk",
+      "tid": "08:10-09:00",
+      "color": "#03b1fc",
       "color2": "#FFFFFF"
     },
     {
       "n": "MA",
-      "tid": "09:30-10:30",
+      "tid": "09:15-10:00",
       "color": "#3D921F",
       "color2": "#FFFFFF"
     },
     {
       "n": "SO",
-      "tid": "10:35-11:05",
+      "tid": "10:15-11:15",
       "color": "#9D2F52",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "IDH",
-      "tid": "11:15-11:55",
-      "color": "#B43A2F",
       "color2": "#FFFFFF"
     },
     {
       "n": "Lunch",
-      "tid": "12:10-12:30",
+      "tid": "11:20-11:40",
       "color": "#FFFFFF",
       "color2": "#000000"
     },
     {
-      "n": "SO",
-      "tid": "12:30-13:20",
-      "color": "#9D2F52",
+      "n": "NO",
+      "tid": "11:50-12:50",
+      "color": "#7C9E39",
       "color2": "#FFFFFF"
     },
     {
-      "n": "Språk",
-      "tid": "13:25-14:30",
-      "color": "#136266",
+      "n": "SLTX",
+      "tid": "13:00-13:40",
+      "color": "#12526e",
       "color2": "#FFFFFF"
     }
   ],
 
   "tis": [
     {
+      "n": "SV",
+      "tid": "08:10-09:00",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
+    },
+    {
       "n": "MA",
-      "tid": "08:15-09:15",
+      "tid": "09:20-10:05",
       "color": "#3D921F",
       "color2": "#FFFFFF"
     },
     {
-      "n": "Språk",
-      "tid": "09:20-09:35",
-      "color": "#136266",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "MU",
-      "tid": "09:45-10:30",
-      "color": "#555F1A",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "SV",
-      "tid": "10:40-11:25",
-      "color": "#7B2820",
+      "n": "NO",
+      "tid": "10:15-11:20",
+      "color": "#7C9E39",
       "color2": "#FFFFFF"
     },
     {
@@ -76,150 +64,150 @@
       "color2": "#000000"
     },
     {
-      "n": "NO",
-      "tid": "11:45-12:30",
-      "color": "#7C9E39",
-      "color2": "#FFFFFF"
-    },
-    {
       "n": "SO",
-      "tid": "12:35-13:35",
+      "tid": "12:00-13:00",
       "color": "#9D2F52",
       "color2": "#FFFFFF"
     },
     {
-      "n": "IDH",
-      "tid": "13:50-14:30",
-      "color": "#B43A2F",
+      "n": "EN",
+      "tid": "13:35-14:30",
+      "color": "#4C275D",
       "color2": "#FFFFFF"
     }
   ],
 
   "ons": [
     {
-      "n": "MA",
-      "tid": "08:15-09:00",
-      "color": "#3D921F",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "BL",
-      "tid": "09:20-10:20",
-      "color": "#BD6621",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "SV",
-      "tid": "10:30-11:10",
-      "color": "#7B2820",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "Lunch",
-      "tid": "11:10-11:30",
-      "color": "#FFFFFF",
-      "color2": "#000000"
-    },
-    {
       "n": "IDH",
-      "tid": "11:40-13:00",
+      "tid": "08:10-09:30",
       "color": "#B43A2F",
       "color2": "#FFFFFF"
     },
     {
-      "n": "EN",
-      "tid": "13:15-14:10",
-      "color": "#4C275D",
+      "n": "MA",
+      "tid": "09:40-10:25",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "ASV/SV/EN",
+      "tid": "10:30-11:20",
+      "color": "#03b1fc",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "Lunch",
+      "tid": "11:20-11:40",
+      "color": "#FFFFFF",
+      "color2": "#000000"
+    },
+    {
+      "n": "MU eller HKK",
+      "tid": "11:45-13:20",
+      "color": "#808080",
       "color2": "#FFFFFF"
     },
     {
       "n": "SV",
-      "tid": "14:10-14:30",
+      "tid": "13:40-14:20",
       "color": "#7B2820",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "SLTX",
+      "tid": "14:40-15:20",
+      "color": "#12526e",
       "color2": "#FFFFFF"
     }
   ],
 
   "tor": [
     {
+      "n": "SV",
+      "tid": "08:10-08:40",
+      "color": "#7B2820",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "BL",
+      "tid": "08:50-09:50",
+      "color": "#BD6621",
+      "color2": "#FFFFFF"
+    },
+    {
       "n": "MA",
-      "tid": "08:15-09:15",
+      "tid": "10:00-10:45",
       "color": "#3D921F",
       "color2": "#FFFFFF"
     },
     {
-      "n": "Språk",
-      "tid": "09:20-09:35",
-      "color": "#136266",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "SL",
-      "tid": "09:45-11:05",
-      "color": "#25305C",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "Lunch",
-      "tid": "11:10-11:30",
-      "color": "#FFFFFF",
-      "color2": "#000000"
-    },
-    {
       "n": "SO",
-      "tid": "11:30-12:00",
+      "tid": "10:55-11:45",
       "color": "#9D2F52",
       "color2": "#FFFFFF"
     },
     {
+      "n": "Lunch",
+      "tid": "11:50-12:10",
+      "color": "#FFFFFF",
+      "color2": "#000000"
+    },
+    {
       "n": "NO",
-      "tid": "12:05-13:05",
+      "tid": "12:15-13:00",
       "color": "#7C9E39",
       "color2": "#FFFFFF"
     },
     {
-      "n": "Språk",
-      "tid": "13:10-13:40",
-      "color": "#136266",
+      "n": "IDH",
+      "tid": "13:40-15:00",
+      "color": "#B43A2F",
       "color2": "#FFFFFF"
     }
   ],
 
   "fre": [
     {
-      "n": "TK",
-      "tid": "08:15-09:55",
-      "color": "#2A6FAD",
+      "n": "MA",
+      "tid": "08:10-08:55",
+      "color": "#3D921F",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "SO",
+      "tid": "09:15-10:15",
+      "color": "#9D2F52",
       "color2": "#FFFFFF"
     },
     {
       "n": "EN",
-      "tid": "10:00-11:00",
+      "tid": "10:25-11:25",
       "color": "#4C275D",
       "color2": "#FFFFFF"
     },
     {
       "n": "Lunch",
-      "tid": "11:10-11:30",
+      "tid": "11:35-11:55",
       "color": "#FFFFFF",
       "color2": "#000000"
     },
     {
-      "n": "SO",
-      "tid": "11:40-12:40",
-      "color": "#9D2F52",
-      "color2": "#FFFFFF"
-    },
-    {
-      "n": "NO",
-      "tid": "12:50-13:50",
-      "color": "#7C9E39",
-      "color2": "#FFFFFF"
-    },
-    {
       "n": "SV",
-      "tid": "13:55-14:20",
+      "tid": "12:05-12:45",
       "color": "#7B2820",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "TK",
+      "tid": "12:55-13:45",
+      "color": "#2A6FAD",
+      "color2": "#FFFFFF"
+    },
+    {
+      "n": "Språk",
+      "tid": "14:00-15:00",
+      "color": "#03b1fc",
       "color2": "#FFFFFF"
     }
   ]
